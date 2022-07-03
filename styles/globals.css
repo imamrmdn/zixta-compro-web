@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --screen-xs: 0px;
+  --screen-sm: 768px;
+  --screen-md: 992px;
+  --screen-lg: 1200px;
+  --screen-xl: 1400px;
+  --gray: #718096;
+  --primary-blue: #2b6cb0;
+  --animate-duration: 500ms;
+  --animate-delay: 0.5s;
+  /* --screen-xs: "@media screen and (min-width: 0px)";
+  --screen-sm: "@media screen and (min-width: 768px)";
+  --screen-md: "@media screen and (min-width: 992px)";
+  --screen-lg: "@media screen and (min-width: 1200px)";
+  --screen-xl: "@media screen and (min-width: 1400px)";
+  --screen-smMax: "@media screen and (max-width: 768px)";
+  --screen-mdMax: "@media screen and (max-width: 992px)";
+  --screen-lgMax: "@media screen and (max-width: 1200px)";
+  --screen-xlMax: "@media screen and (max-width: 1400px)"; */
+}
