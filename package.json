@@ -14,11 +14,13 @@
     "@emotion/react": "11",
     "@emotion/styled": "11",
     "animate.css": "^4.1.1",
-    "framer-motion": "6",
+    "framer-motion": "^6.4.3",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "^6.0.4"
+    "react-intl": "^6.0.4",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "8.18.0",
