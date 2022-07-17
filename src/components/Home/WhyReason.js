@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Box, Heading } from "@chakra-ui/react"
 
-import styles from 'styles/Home.module.css'
+import styles from 'src/styles/Home.module.css'
 
 import juggernautImage from 'assets/jugger.jpg'
 
