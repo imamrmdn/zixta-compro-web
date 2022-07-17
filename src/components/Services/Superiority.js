@@ -1,7 +1,7 @@
 import { Box, Heading, Text, Icon } from "@chakra-ui/react"
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons"
 
-import styles from 'styles/Services.module.css'
+import styles from 'src/styles/Services.module.css'
 
 export default function Superiority() {
     return (
@@ -54,7 +54,7 @@ export default function Superiority() {
 
 function Card({ title, desc, ...rest }) {
     return (
-        <Box p={5} w="100%" shadow='md' borderWidth='1px' {...rest}>
+        <Box p={5} w="100%" shadow='md' borderWidth='1px' borderRadius='10px' {...rest}>
             <Heading fontSize='xl' textAlign="center" height="12">{title}</Heading>
             <Text mt={4} textAlign="center">{desc}</Text>
         </Box>

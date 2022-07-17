@@ -4,7 +4,7 @@ import { Box, Heading } from "@chakra-ui/react"
 import Superiority from "./Superiority"
 
 import juggernautImage from 'assets/jugger.jpg'
-import styles from 'styles/Services.module.css'
+import styles from 'src/styles/Services.module.css'
 
 export default function ServicesComponent() {
     return (
