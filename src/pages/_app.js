@@ -9,7 +9,7 @@ import Layout from 'src/components/Layout';
 import 'animate.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import 'styles/globals.css'
+import 'src/styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter()
