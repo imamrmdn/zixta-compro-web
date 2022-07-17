@@ -9,7 +9,7 @@ import SmallNavbar from "./SmallNavbar"
 
 import logoImage from 'assets/ga-diajak.jpg'
 
-import styles from 'styles/Layout.module.css'
+import styles from 'src/styles/Layout.module.css'
 
 const navbarList = [{
     id: 'Home',
@@ -132,8 +132,8 @@ export default function Layout({ children }) {
                     <Image
                         src={logoImage}
                         alt="logo image"
-                        width={200}
-                        height={200}
+                        width={175}
+                        height={175}
                     // className={styles.footerImage}
                     />
                     <Heading size="md" style={{ margin: '0.25em 0px' }}>

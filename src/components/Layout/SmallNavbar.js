@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import { Box, IconButton } from '@chakra-ui/react'
 import { CloseIcon } from '@chakra-ui/icons'
 
-import styles from 'styles/Layout.module.css'
+import styles from 'src/styles/Layout.module.css'
 
 export default function SmallNavbar({ onClose }) {
     const [width, setWidth] = useState(window.innerWidth)
