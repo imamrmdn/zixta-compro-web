@@ -1,0 +1,176 @@
+.profileSubTitle {
+	text-align: center;
+	font-weight: 600;
+	font-size: 1rem;
+	color: var(--gray);
+	margin-top: 0.75rem;
+}
+
+.ourStoryContainer {
+	width: 100%;
+	margin-top: 0.5rem;
+	padding: 0;
+}
+
+.ceoStoryWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.ceoStoryItem {
+	width: 100%;
+	min-height: 600px;
+	margin: 0.5rem 0px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+}
+
+.ceoStoryNameCardLarge,
+.ceoStoryNameCardSmall {
+	height: 10%;
+	background-color: white;
+	border-width: 1px;
+	border-left: 10px solid blue;
+	border-radius: 10px;
+}
+
+.ceoStoryNameCardLarge {
+	width: 65%;
+	display: block;
+}
+
+.ceoStoryNameCardSmall {
+	display: none;
+	width: 100%;
+}
+
+.ceoStoryDescriptionWrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.ceoStoryDescriptionItem {
+	width: 100%;
+	height: 10%;
+	margin-top: 0.5rem;
+	background-color: white;
+	border-width: 1px;
+	border-radius: 10px;
+}
+
+.ourStoryWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.ourStoryItem {
+	/* border: 1px solid pink; */
+	width: 100%;
+	min-height: 400px;
+	margin: 0.5rem 0px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+}
+
+.companyCustomerContainer {
+	width: 100%;
+	margin-top: 0.5rem;
+	padding: 0;
+}
+
+.companyCustomerWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.companyCustomerItem {
+	/* border: 1px solid pink; */
+	text-align: center;
+	width: 100%;
+	margin: 0.5rem 0px;
+}
+
+@media screen and (min-width: 768px) {
+	.companyCustomerContainer,
+	.ourStoryContainer {
+		width: 100%;
+	}
+
+	.ceoStoryWrapper {
+		width: 75%;
+		margin: auto;
+	}
+
+	.ceoStoryNameCardLarge {
+		display: none;
+	}
+
+	.ceoStoryNameCardSmall {
+		display: block;
+	}
+
+	.companyCustomerItem {
+		width: 25%;
+	}
+
+	.ourStoryItem {
+		width: 47.5%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.companyCustomerContainer {
+		padding: 1rem;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	/* .ourStoryContainer {
+		padding: 1rem;
+	} */
+
+	.ceoStoryWrapper {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+
+	.ceoStoryItem,
+	.ceoStoryDescriptionWrapper {
+		width: 47.5%;
+	}
+
+	.ceoStoryNameCardSmall,
+	.ceoStoryDescriptionItem {
+		box-shadow: none !important;
+		border-radius: 0px;
+	}
+
+	.ceoStoryDescriptionItem {
+		border-width: 0px;
+	}
+
+	.ourStoryItem {
+		width: 23.5%;
+	}
+}
+
+/* @media screen and (min-width: 1240px) {
+}  */
