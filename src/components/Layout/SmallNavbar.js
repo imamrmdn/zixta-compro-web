@@ -38,7 +38,7 @@ export default function SmallNavbar({ onClose }) {
             <LinkItem href="/" name="Home" onClose={onClose} />
             <LinkItem href="/profile" name="Profile" onClose={onClose} />
             <LinkItem href="/services" name="Services" onClose={onClose} />
-            <LinkItem href="/careers" name="Careers" onClose={onClose} />
+            <LinkItem href="/services#career" name="Careers" onClose={onClose} />
             <LinkItem href="/contact" name="Contact Us" onClose={onClose} />
         </Box>
     )

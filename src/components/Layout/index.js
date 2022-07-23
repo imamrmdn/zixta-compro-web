@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 import Image from 'next/image'
 import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure } from '@chakra-ui/react'
-import { ArrowForwardIcon, HamburgerIcon } from '@chakra-ui/icons'
+import { ArrowForwardIcon, HamburgerIcon, PhoneIcon, TimeIcon, EmailIcon } from '@chakra-ui/icons'
 
 import SmallNavbar from "./SmallNavbar"
 
@@ -25,7 +25,7 @@ const navbarList = [{
 },
 {
     id: 'Careers',
-    path: '/careers'
+    path: '/services#career'
 },
 {
     id: 'Contact',
@@ -47,7 +47,6 @@ export default function Layout({ children }) {
         return () => window?.removeEventListener('scroll', handleScroll);
     }, [])
 
-
     const handleScroll = () => {
         if (window?.pageYOffset > 160) {
             setIsScroll(true)
@@ -56,6 +55,8 @@ export default function Layout({ children }) {
             setIsScroll(false)
         }
     }
+
+    console.log(pathname)
 
     if (isOpen) {
         return <SmallNavbar onClose={onClose} />
@@ -66,7 +67,7 @@ export default function Layout({ children }) {
             <header className={isScroll ? styles.scrollContainer : styles.container}>
                 <Box className={styles.companyNameContainer}>
                     <Box className={styles.companyNameWrapper}>
-                        <Box w={55}>
+                        <Box w={55} className={styles.companyNameLogo}>
                             <Image
                                 src={logoImage}
                                 alt="logo image"
@@ -75,26 +76,28 @@ export default function Layout({ children }) {
                                 height='10%'
                             />
                         </Box>
-                        <Heading as='h2' size='md' marginLeft='0.5em' width="60%">
+                        <Heading as='h2' size='md' marginLeft='0.5em' width="60%" className={styles.companyNameTitle}>
                             Zixta Logistics Services
                         </Heading>
                     </Box>
                     <Box className={styles.languageContainer}>
+                        <Box className={styles.companyDescriptionLargeContainer}>
+                            <Box className={styles.companyDescriptionLargeWrapper}>
+                                <Box className={styles.companyDescriptionLargeItem}><PhoneIcon boxSize={5} /></Box>
+                                <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box>
+                                <Box className={styles.companyDescriptionLargeItem}><EmailIcon boxSize={5} /></Box>
+                            </Box>
+                        </Box>
                         <Box as={Menu}>
                             <MenuButton as={Button} >
                                 {menuLocaleName}
                             </MenuButton>
                             <MenuList p={0} minW="0" w={'55px'}>
-                                {/* {[...locales].sort().map((locale) => {
-                                const shortLocale = locale === "id-ID" ? "ID" : "EN"
-                                return ( */}
                                 <Link href={asPath} locale={menuLocalePath}>
                                     <MenuItem>
-                                        {/* {shortLocale} */}
                                         {menuItemLocaleName}
                                     </MenuItem>
                                 </Link>
-                                {/* })} */}
                             </MenuList>
                         </Box>
                         <Box className={`animate__animated animate__lightSpeedInLeft ${styles.hamburgerIcon}`}>
@@ -107,14 +110,14 @@ export default function Layout({ children }) {
                         </Box>
                     </Box>
                 </Box>
-                <Box className={styles.companyDescriptionContainer}>
-                    <Box className={styles.companyDescriptionWrapper}>
-                        <Box className={styles.companyDescriptionItem}>Contact Us</Box>
-                        <Box className={styles.companyDescriptionItem}>Working Hours</Box>
-                        <Box className={styles.companyDescriptionItem}>Email Us</Box>
+                <Box className={styles.companyDescriptionSmallContainer}>
+                    <Box className={styles.companyDescriptionSmallWrapper}>
+                        <Box className={styles.companyDescriptionSmallItem}>Contact Us</Box>
+                        <Box className={styles.companyDescriptionSmallItem}>Working Hours</Box>
+                        <Box className={styles.companyDescriptionSmallItem}>Email Us</Box>
                     </Box>
                 </Box>
-                <Box className={styles.navbarContainer}>
+                <Box mt="8" className={styles.navbarContainer}>
                     {navbarList.map(item => (
                         <Link href={item.path} key={item.id}>
                             <a className={pathname === item.path ? styles.activeLink : styles.nonActiveLink}>
@@ -145,7 +148,7 @@ export default function Layout({ children }) {
                 </Box>
                 <Box className={styles.footerHelpWrapper}>
                     <Box className={styles.footerInfo}>
-                        <Link href="/careers">
+                        <Link href="/services#career">
                             <Button leftIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline'>
                                 Carrers
                             </Button>

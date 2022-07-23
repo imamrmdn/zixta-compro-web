@@ -1,6 +1,6 @@
 .container {
 	width: 100%;
-	padding: 0px 0.5rem;
+	/* padding: 0px 0.5rem; */
 }
 
 .scrollContainer {
@@ -33,23 +33,11 @@
 	border-color: red;
 }
 
-.footer {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.25rem 0px;
-	border-width: 1px;
-	border-color: blue;
-}
-
 .companyNameContainer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding-top: 1rem;
 }
 
 .companyNameWrapper {
@@ -59,6 +47,15 @@
 	flex-wrap: wrap;
 }
 
+.companyNameLogo {
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+.companyNameTitle {
+	display: none;
+}
+
 .languageContainer {
 	width: 30%;
 	display: flex;
@@ -66,13 +63,23 @@
 	align-items: baseline;
 }
 
-.companyDescriptionContainer {
+.companyDescriptionLargeContainer {
+	display: none;
+}
+
+.companyDescriptionSmallContainer {
 	display: flex;
+	margin-top: 0.5rem;
+}
+
+.companyDescriptionLargeContainer,
+.companyDescriptionSmallContainer {
 	justify-content: flex-end;
 	width: 100%;
 }
 
-.companyDescriptionWrapper {
+.companyDescriptionLargeWrapper,
+.companyDescriptionSmallWrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -80,16 +87,29 @@
 	margin-top: 0.5rem;
 }
 
-.companyDescriptionItem {
+.companyDescriptionLargeItem,
+.companyDescriptionSmallItem {
 	width: 33%;
 	text-align: center;
 	padding: 10px;
 	color: var(--gray);
 }
 
+.footer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.25rem 0px;
+	border-width: 1px;
+	border-color: var(--primary-blue);
+}
+
 .footerDescriptionWrapper {
 	width: 100%;
 	height: 100%;
+	padding-left: 0.25em;
 	margin-bottom: 0.5em;
 }
 
@@ -108,6 +128,7 @@
 .footerHelpWrapper {
 	width: 100%;
 	height: 100%;
+	margin: 0.5rem 0px;
 }
 
 .footerInfo {
@@ -124,6 +145,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 1em 0px;
+	margin-top: 1rem;
 }
 
 .navbarContainer {
@@ -161,7 +183,7 @@
 	top: 0;
 }
 
-.companyDescriptionItem,
+.companyDescriptionSmallItem,
 .activeLink,
 .activeSmallLink,
 .nonActiveLink,
@@ -194,7 +216,7 @@
 }
 
 /* @media screen and (max-width: 767px) {
-  .companyDescriptionWrapper {
+  .companyDescriptionSmallWrapper {
     width: 75%;
   }
 } */
@@ -212,6 +234,22 @@
 		padding: 0;
 	}
 
+	.companyNameLogo {
+		margin-left: 0;
+	}
+
+	.companyNameTitle {
+		display: block;
+	}
+
+	.companyDescriptionLargeContainer {
+		display: flex;
+	}
+
+	.companyDescriptionSmallContainer {
+		display: none;
+	}
+
 	.scrollContainer {
 		top: 0;
 		left: 12.5%;
@@ -224,6 +262,8 @@
 
 	.footerHelpWrapper {
 		width: 70%;
+		margin: none;
+		padding: none;
 		/* padding-left: 0.5em; */
 	}
 
@@ -256,13 +296,13 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.companyDescriptionWrapper {
+	.companyDescriptionSmallWrapper {
 		width: 50%;
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	.companyDescriptionWrapper {
+	.companyDescriptionSmallWrapper {
 		width: 40%;
 	}
 }
