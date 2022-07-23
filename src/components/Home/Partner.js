@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Box, Heading } from "@chakra-ui/react"
 
@@ -6,9 +7,24 @@ import juggernautImage from 'assets/jugger.jpg'
 import styles from 'src/styles/Home.module.css'
 
 export default function Partner() {
+    const [isCompanyPartnerVisible, setisCompanyPartnerVisible] = useState(false)
+
+    const companyPartnerRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            // console.log('entry', entry);
+            // console.log('entry.isIntersecting', entry.isIntersecting);
+            setisCompanyPartnerVisible(entry.isIntersecting)
+        });
+
+        observer.observe(companyPartnerRef.current)
+    }, [])
+
     return (
-        <>
-            <Heading as='h2' my={2} size='lg' textAlign='center'>
+        <Box mt="8" ref={companyPartnerRef} className={isCompanyPartnerVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+            <Heading as='h2' mb="2" size='lg' textAlign='center'>
                 Our Partner
             </Heading>
             <Box className={styles.companyPartnerContainer}>
@@ -44,6 +60,6 @@ export default function Partner() {
                     </Box>
                 </Box>
             </Box>
-        </>
+        </Box>
     )
 }

@@ -16,19 +16,15 @@ export default function WhyReason() {
             const entry = entries[0];
             // console.log('entry', entry);
             // console.log('entry.isIntersecting', entry.isIntersecting);
-            if (entry.isIntersecting) {
-                setisCompanyReasonVisible(entry.isIntersecting)
-            }
+            setisCompanyReasonVisible(entry.isIntersecting)
         });
 
         observer.observe(companyReasonRef.current)
     }, [])
 
     return (
-        <>
-            <Heading as='h2' size='lg' textAlign='center' ref={companyReasonRef}
-                className={isCompanyReasonVisible && `animate__animated  animate__slideInLeft animate__slow`}
-            >
+        <Box mt="10" ref={companyReasonRef} className={isCompanyReasonVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+            <Heading as='h2' size='lg' textAlign='center'>
                 Kenapa Harus Three Dot?
             </Heading>
             <Box className={styles.companyReasonContainer}>
@@ -109,6 +105,6 @@ export default function WhyReason() {
                     </Box>
                 </Box>
             </Box>
-        </>
+        </Box>
     )
 }

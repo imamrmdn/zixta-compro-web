@@ -19,6 +19,28 @@
 		Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.carouselWrapper {
+	width: 100%;
+	max-height: 15rem;
+	overflow: hidden;
+}
+
+.carouselSlider {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+}
+
+.carouselText {
+	position: absolute;
+	top: 5%;
+	right: 47.5%;
+	width: 50%;
+	height: 30%;
+	overflow-y: scroll;
+	z-index: 999;
+}
+
 .companyReasonContainer {
 	width: 100%;
 	padding: 1rem 0px;
@@ -42,7 +64,7 @@
 }
 
 .companyReasonItemSubTitle {
-	font-size: 0.75rem;
+	font-size: 0.85rem;
 }
 
 .companyPartnerContainer {
@@ -71,6 +93,18 @@
 		padding: 0;
 	}
 
+	.carouselWrapper {
+		max-height: 30rem;
+	}
+
+	.carouselText {
+		top: 60%;
+		right: 47.5%;
+		width: 50%;
+		height: 22.5%;
+		overflow: unset;
+	}
+
 	.companyPartnerContainer {
 		width: 100%;
 		padding: 1rem;
@@ -82,6 +116,18 @@
 }
 
 @media screen and (min-width: 1024px) {
+	.carouselWrapper {
+		max-height: 25rem;
+	}
+
+	.carouselText {
+		top: 37.5%;
+		right: 60%;
+		width: 35%;
+		height: 17.5%;
+		overflow: unset;
+	}
+
 	.companyReasonItemWrapper {
 		width: 50%;
 		height: 175px;
@@ -92,6 +138,22 @@
 	}
 }
 
-/* @media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
+	.carouselText {
+		top: 32.5%;
+		right: 60%;
+		width: 35%;
+		height: 15%;
+		overflow: unset;
+	}
+}
 
-} */
+@media screen and (min-width: 1440px) {
+	.carouselText {
+		top: 30%;
+		right: 60%;
+		width: 35%;
+		height: 10%;
+		overflow: unset;
+	}
+}
