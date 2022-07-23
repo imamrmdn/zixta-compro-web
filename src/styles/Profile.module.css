@@ -1,3 +1,15 @@
+.ourPurposeContainer {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ourVisionWrapper,
+.ourMissionWrapper {
+	width: 100%;
+	/* padding: 0px 0.5rem; */
+}
+
 .profileSubTitle {
 	text-align: center;
 	font-weight: 600;
@@ -55,7 +67,7 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: flex-start;
 }
 
 .ceoStoryDescriptionItem {
@@ -67,7 +79,8 @@
 	border-radius: 10px;
 }
 
-.ourStoryWrapper {
+.ourStoryWrapper,
+.galleryWrapper {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -75,7 +88,8 @@
 	align-items: center;
 }
 
-.ourStoryItem {
+.ourStoryItem,
+.galleryItem {
 	/* border: 1px solid pink; */
 	width: 100%;
 	min-height: 400px;
@@ -108,7 +122,55 @@
 	margin: 0.5rem 0px;
 }
 
+.companyTypeWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.companyTypeLeftImage {
+	width: 100%;
+	max-width: 360px;
+	min-height: 360px;
+	margin: 0.5rem 0px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+}
+
+.companyTypeRightItem {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 0.5rem;
+}
+
+.companyTypeRightTitle {
+	max-width: 275px;
+	font-size: 20px;
+	line-height: 27px;
+}
+
+.companyTypeRightDescription {
+	width: 100%;
+	max-width: 549px;
+	margin-top: 1rem;
+	color: var(--gray);
+}
+
 @media screen and (min-width: 768px) {
+	/* .ourPurposeContainer {
+		align-items: center;
+	} */
+
+	.ourVisionWrapper,
+	.ourMissionWrapper {
+		width: 50%;
+	}
+
 	.companyCustomerContainer,
 	.ourStoryContainer {
 		width: 100%;
@@ -131,14 +193,31 @@
 		width: 25%;
 	}
 
-	.ourStoryItem {
+	.ourStoryItem,
+	.galleryItem {
 		width: 47.5%;
+	}
+
+	.companyTypeRightTitle {
+		max-width: 100%;
+	}
+
+	.companyTypeRightDescription {
+		max-width: 90%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.companyCustomerContainer {
 		padding: 1rem;
+	}
+
+	.companyTypeRightItem {
+		margin-top: 0px;
+	}
+
+	.companyTypeRightDescription {
+		max-width: 70%;
 	}
 }
 
@@ -167,8 +246,30 @@
 		border-width: 0px;
 	}
 
-	.ourStoryItem {
+	.ourStoryItem,
+	.galleryItem {
 		width: 23.5%;
+	}
+
+	.companyTypeLeftImage {
+		width: 42.5%;
+	}
+
+	.companyTypeRightItem {
+		width: 55%;
+	}
+
+	.companyTypeRightItem {
+		margin: 0;
+	}
+
+	.companyTypeRightTitle {
+		max-width: 100%;
+	}
+
+	.companyTypeRightDescription {
+		max-width: 90%;
+		margin-top: 1.75rem;
 	}
 }
 
