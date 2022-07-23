@@ -1,11 +1,27 @@
+import { useEffect, useRef, useState } from "react"
 import { Box, Heading, Text, Icon } from "@chakra-ui/react"
 import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons"
 
 import styles from 'src/styles/Services.module.css'
 
 export default function Superiority() {
+    const [isCompanySuperiorityVisible, setisCompanySuperiorityVisible] = useState(false)
+
+    const companySuperiorityRef = useRef()
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            // console.log('entry', entry);
+            // console.log('entry.isIntersecting', entry.isIntersecting);
+            setisCompanySuperiorityVisible(entry.isIntersecting)
+        });
+
+        observer.observe(companySuperiorityRef.current)
+    }, [])
+
     return (
-        <>
+        <Box ref={companySuperiorityRef} className={isCompanySuperiorityVisible && `animate__animated  animate__slideInLeft animate__slow`}>
             <Heading as='h2' size='lg' textAlign="center" color="blue">Keunggulan</Heading>
             <Box className={styles.companySuperiorityContainer}>
                 <Box className={styles.companySuperiorityItemWrapper}>
@@ -47,7 +63,7 @@ export default function Superiority() {
                     />
                 </Box>
             </Box>
-        </>
+        </Box>
     )
 }
 
