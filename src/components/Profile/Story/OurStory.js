@@ -12,28 +12,14 @@ export default function OurStory() {
                 backgroundImage={`url(${juggernautImage.src})`}
                 className={styles.ourStoryItem}
             >
-                <Card title="Juggernaut" desc="Carry" />
+                <Card title="Ramadhan Rafsanjani" desc={`Co-Founder & COO`} />
             </Box>
             <Box
                 p={5}
                 backgroundImage={`url(${juggernautImage.src})`}
                 className={styles.ourStoryItem}
             >
-                <Card title="Juggernaut" desc="Carry" />
-            </Box>
-            <Box
-                p={5}
-                backgroundImage={`url(${juggernautImage.src})`}
-                className={styles.ourStoryItem}
-            >
-                <Card title="Juggernaut" desc="Carry" />
-            </Box>
-            <Box
-                p={5}
-                backgroundImage={`url(${juggernautImage.src})`}
-                className={styles.ourStoryItem}
-            >
-                <Card title="Juggernaut" desc="Carry" />
+                <Card title="Afifah Riska Ramadhanty" desc={`Financial Controler`} />
             </Box>
         </Box>
     )
@@ -41,7 +27,7 @@ export default function OurStory() {
 
 function Card({ title, desc, ...rest }) {
     return (
-        <Box p={5} w="100%" h="10%" shadow='md' backgroundColor="white" borderWidth='1px' borderLeft="10px solid blue" borderRadius='10px' {...rest}>
+        <Box p={5} w="75%" h="10%" shadow='md' backgroundColor="white" borderWidth='1px' borderLeft="10px solid blue" borderRadius='10px' {...rest}>
             <Heading fontSize='lg' height="7">{title}</Heading>
             <Text mt={4} borderTopWidth="1px">{desc}</Text>
         </Box>

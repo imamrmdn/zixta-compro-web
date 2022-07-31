@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react"
 import { Box, Heading, OrderedList, ListItem } from "@chakra-ui/react"
+import { useIntl } from 'react-intl'
 
 import styles from 'src/styles/Profile.module.css'
 
 export default function OurPurpose() {
     const [isCompanyPurposeVisible, setisCompanyPurposeVisible] = useState(false)
 
+    const { messages } = useIntl()
     const companyPurposeRef = useRef()
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            // console.log('entry', entry);
-            // console.log('entry.isIntersecting', entry.isIntersecting);
             setisCompanyPurposeVisible(entry.isIntersecting)
         });
 
@@ -24,52 +24,53 @@ export default function OurPurpose() {
             <Box className={styles.ourPurposeContainer}>
                 <Box className={styles.ourVisionWrapper}>
                     <Heading as='h2' mt="8" mb="2" size='lg' textAlign='center'>
-                        Our Vision
+                        {messages["company.vision"]}
                     </Heading>
                     <Box>
-                        Menjadi perusahaan penyedia layanan jasa logistik yang berintegritas, berkualitas dan terkemuka di Indonesia, dengan senantiasa mengutamakan kepuasan konsumen, serta menjunjung tinggi kepercayaan mitra kerja.
+                        {messages["company.vision.description"]}
                     </Box>
                 </Box>
                 <Box className={styles.ourMissionWrapper}>
                     <Heading as='h2' mt="8" mb="2" size='lg' textAlign='center'>
-                        Our Mission
+                        {messages["company.mission"]}
                     </Heading>
                     <OrderedList>
                         <ListItem fontWeight={600}>
                             <Heading as='h2' mt="2" size='md'>
-                                Kualitas
+                                {messages["company.mission.title.1"]}
                             </Heading>
                         </ListItem>
                         <Box>
-                            Menyediakan pelayanan jasa logistik yang efektif dan efisien dalam meningkatkan kualitas saat proses pengiriman barang. Pelayanan yang berkualitas dapat memberikan tingkat terhadap konsumen.
+                            {messages["company.mission.description.1"]}
                         </Box>
 
                         <ListItem fontWeight={600}>
                             <Heading as='h2' mt="2" size='md'>
-                                Delivery on time
+                                {messages["company.mission.title.2"]}
                             </Heading>
                         </ListItem>
                         <Box>
-                            Memberikan pelayanan jasa logistik secara tepat waktu dalam melakukan pengiriman barang dari port to door maupun door to door.
+                            {messages["company.mission.description.2"]}
                         </Box>
 
                         <ListItem fontWeight={600}>
                             <Heading as='h2' mt="2" size='md'>
-                                Sumber daya manusia
+                                {messages["company.mission.title.3"]}
                             </Heading>
                         </ListItem>
                         <Box>
-                            Membuka lapangan pekerjaan serta mengembangkan sumber daya manusia yang berkompeten, berintegritas, cerdas dan loyal.
+                            {messages["company.mission.description.3"]}
                         </Box>
 
                         <ListItem fontWeight={600}>
                             <Heading as='h2' mt="2" size='md'>
-                                Aksesibilitas
+                                {messages["company.mission.title.4"]}
                             </Heading>
                         </ListItem>
                         <Box>
-                            Memberikan proses pengiriman barang yang mudah, ekonomis dan terpercaya sehingga para konsumen dapat menerima tingkat kualitas yang signifikan.
+                            {messages["company.mission.description.4"]}
                         </Box>
+
                     </OrderedList>
                 </Box>
             </Box>
