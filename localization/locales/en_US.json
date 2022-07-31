@@ -1,3 +1,56 @@
 {
-  "home.get.start": "Get started by editing"
+	"navbar.home": "Home",
+	"navbar.profile": "Profile",
+	"navbar.services": "Services",
+	"navbar.career": "Careers",
+	"navbar.contact": "Contact Us",
+
+	"company.history": "Company History",
+	"company.history.1": "PT Zixta Logistics Services is a logistics company, established and located at Jalan Enggano No.66, Tjokro brothers building, Tanjung Priok, North Jakarta, the founders of PT Zixta Logistics Services were H. Priyo M. with H. Samsudin in 2008, and the commissioner, Ika Yunita Isdiyanti, who contributed in providing capital. Until now, employees working at PT Zixta Logistics Services have opened 10-49 employees. The purpose of establishing this company is to create jobs, meet the demand for the logistics market, improve the economy and welfare, as well as become a logistics player (PL) and logistics service provider (PJL) who compete and dominate the logistics sector on a national scale.",
+	"company.history.2": "The form of business entity of this company is a Limited Liability Company (PT) and has legal status in the legality of establishing the company. The target market at PT Zixta Logistics Services is exporters and importers who want to send goods from the point of delivery – port – factory. In the order process, exporters and exporters will be provided with costume clearance, PPJK and trucking services by land and air. PT Zixta Logistics Services can maximize the delivery of goods on time. Currently, PT Zixta Logitsics Services has collaborated with several companies in managing export and import documents. PT Zixta Logistics Services in export activities has collaborated with large steel producing companies that export to Australia, Vanuatu, Samoa, Papua New Guinea, and Tonga. Meanwhile, in the Import activity, PT Zixta Logistics prepares documents and sends imported goods in the form of raw materials such as plastic ore, iron, and plastic roll, in addition there are imported goods that are sent in the form of machine spare parts, plastic sandals and other factory machines.",
+
+	"company.partner": "Our Partner",
+	"company.customer": "Our Customer",
+	"company.vendor": "Our Vendor",
+	"company.story": "Our Story",
+	"company.story.title": "Come get to know us closer!",
+	"company.trusted.title": "Some of our major partners and clients who are satisfied with our services",
+
+	"company.why.reason": "PT Zixta Logistics Services is a company with International Sea, Air Customs Clearance and Trucking. This company has become a consumer trust in the delivery of factory goods or company customers. PT Zixta Logistics Services has become the choice of large companies in enjoying export and import expedition services. The services provided are superior in sending goods. Human resources are the driving force in the business processes of PT Zixta Logistics Services. Until now, there are 10-49 employees working in this company every year.",
+	"company.why.reason.title.1": "Quality",
+	"company.why.reason.title.2": "Delivery on Time",
+	"company.why.reason.title.3": "Human Resources",
+	"company.why.reason.title.4": "Accessibility",
+	"company.why.reason.description.1": "Providing effective and efficient logistics services in improving the quality during the delivery of goods. Quality service can provide a level of satisfaction to consumers.",
+	"company.why.reason.description.2": "Provide logistics services in a timely manner in delivering goods from port to door or door to door.",
+	"company.why.reason.description.3": "Opening employment opportunities and developing competent, integrated, intelligent and loyal human resources.",
+	"company.why.reason.description.4": "Provide an easy, economical and reliable delivery process so that consumers can receive a significant level of quality.",
+
+	"company.vision": "Our Vision",
+	"company.vision.description": "To become a logistics service provider company with integrity, quality and leading in Indonesia, by always prioritizing customer satisfaction, and upholding the trust of partners.",
+
+	"company.mission": "Our Mission",
+	"company.mission.title.1": "Quality",
+	"company.mission.title.2": "Delivery on time",
+	"company.mission.title.3": "Human Resources",
+	"company.mission.title.4": "Accessibility",
+	"company.mission.description.1": "Provide effective and efficient logistics services in improving quality during the process of delivering goods. Quality service can provide a level for consumers.",
+	"company.mission.description.2": "Provide logistics services in a timely manner in delivering goods from port to door and door to door.",
+	"company.mission.description.3": "Opening job opportunities and developing competent, integrity, intelligent and loyal human resources.",
+	"company.mission.description.4": "Provide an easy, economical and reliable delivery process so that consumers can receive a significant level of quality.",
+
+	"company.offer.provide.title.1": "Door To Port",
+	"company.offer.provide.title.2": "Door to Door",
+	"company.offer.provide.description.1": "This service can be used for domestic and international shipping purposes, usually also for types of cargo and can be sent by air, sea and land.",
+	"company.offer.provide.description.2": "In this service, the goods will be picked up by the delivery service company to the address of the sender of the goods and will be delivered to the address of the recipient of the goods.",
+
+	"company.services.title.1": "Freight Forwarding",
+	"company.services.title.2": "Inland transportation",
+	"company.services.title.3": "Custom Clearance",
+	"company.services.description.1": "Our company provides services that are engaged in transportation with types of cargo delivery in the form of FCL, bulk, flat trucks and LCL. We serve import-export shipping services (international) by sea and air effectively and efficiently.",
+	"company.services.description.2": "We have a fleet of more than 50+ both 20 feet and 40 feet, which have been monitored by GPS to make shipping tracking easy, real time and cost efficiency. One of our missions is to provide convenience and satisfaction for importers and exporters.",
+	"company.services.description.3": "Ease of processing import and export documents by sea and air. Procedures that have been integrated by Customs so as to give customers confidence in using our services. Starting from the management of making PIB or PEB, DO, insurance and shipping.",
+
+	"career.text": "Send your CV to ",
+	"career.join.us": "Join with us!"
 }

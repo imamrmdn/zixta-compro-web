@@ -1,3 +1,56 @@
 {
-  "home.get.start": "Memulai dengan mengedit"
+	"navbar.home": "Home",
+	"navbar.profile": "Profil",
+	"navbar.services": "Services",
+	"navbar.career": "Karir",
+	"navbar.contact": "Kontak Kami",
+
+	"company.history": "Sejarah Perusahaan",
+	"company.history.1": "PT Zixta Logistics Services adalah perusahaan yang bergerak dalam bidang logistik, didirikan dan terletak di Jalan Enggano No.66, Gedung tjokro bersaudara, Tanjung priok, Jakarta utara, Pendiri PT Zixta Logistics Services adalah H. Priyo M. bersama H. Samsudin pada tahun 2008, dan komisaris yaitu Ika Yunita Isdiyanti yang memberikan kontribusinya dalam memberikan modal. Hingga saat ini karyawan yang bekerja di PT Zixta Logistics Services berjumlah 10-49 karyawan. Tujuan didirikannya perusahaan ini yaitu untuk menciptakan lapangan pekerjaan, memenuhi permintaan pasar logistik, meningkatkan perekonomian dan kesejahteraan, serta menjadi pelaku logostik (PL) dan penyedia jasa logistik (PJL) yang bersaing dan menguasai sektor logitsik dalam skala nasional. Bentuk badan usaha perusahaan ini adalah Perusahaan Terbatas (PT) dan berstatus sah dalam legalitas pendirian perusahaan. Target pasar pada PT Zixta Logistics Services adalah eksportir dan importir yang ingin mengirim barang dari shipment point – pelabuhan – pabrik.",
+	"company.history.2": "Dalam proses order yang akan berjalan eksportir dan eksportir diberikan pelayanan jasa costume clearance, PPJK dan trucking via darat laut maupun udara. PT Zixta Logistics Services dapat memaksimalkan pengiriman barang secara tepat waktu. Pada saat ini PT Zixta Logitsics Services telah bekerja sama dengan beberapa perushaan dalam pengurusan dokumen ekspor dan impor. PT Zixta Logistics Services dalam kegiatan ekspor sudah bekerja sama dengan perusahaan besar penghasil baja yang mengekspor ke Negara Australia, Vanuatu, Samoa, Papua Nugini, dan Tonga. Sedangkan dalam kegiatan Impor PT Zixta Logistics mempersiapkan kebutuhan dokumen dan mengirimkan barang impor yang berupa bahan baku seperti biji plastik, besi, dan plastict roll, selain itu terdapat barang impor yang dikirimkan berupa sparepart mesin, sandal plastik dan mesin-mesin pabrik lainnya.",
+
+	"company.partner": "Partner Kami",
+	"company.customer": "Customer Kami",
+	"company.vendor": "Vendor Kami",
+	"company.story": "Cerita Kami",
+	"company.story.title": "Ayo berkenalan dengan kami lebih dekat!",
+	"company.trusted.title": "Beberapa mitra dan klien utama kami yang puas dengan layanan kami",
+
+	"company.why.reason": "PT Zixta Logistics Services adalah perusahaan yang bergerak di bidang International Sea, Air Customs Clearance dan Trucking. Perusahaan ini telah menjadi kepercayaan konsumen dalam pengiriman barang-barang pabrik atau pelanggan perusahaan. PT Zixta Logistics Services telah menjadi pilihan perusahaan besar dalam menikmati jasa ekspedisi ekspor dan impor. Pelayanan yang diberikan lebih unggul dalam pengiriman barang. Sumber daya manusia merupakan motor penggerak dalam proses bisnis PT Zixta Logistics Services. Hingga saat ini, ada 10-49 karyawan yang bekerja di perusahaan ini setiap tahun.",
+	"company.why.reason.title.1": "Kualitas",
+	"company.why.reason.title.2": "Pengiriman Tepat Waktu",
+	"company.why.reason.title.3": "Sumber Daya Manusia",
+	"company.why.reason.title.4": "Aksesibilitas",
+	"company.why.reason.description.1": "Memberikan pelayanan logistik yang efektif dan efisien dalam meningkatkan kualitas selama pengiriman barang. Pelayanan yang berkualitas dapat memberikan tingkat kepuasan kepada konsumen.",
+	"company.why.reason.description.2": "Memberikan layanan logistik secara tepat waktu dalam pengiriman barang dari port to door atau door to door.",
+	"company.why.reason.description.3": "Membuka kesempatan kerja dan mengembangkan sumber daya manusia yang kompeten, terintegrasi, cerdas dan loyal.",
+	"company.why.reason.description.4": "Memberikan proses pengiriman yang mudah, ekonomis dan dapat diandalkan sehingga konsumen dapat menerima tingkat kualitas yang signifikan.",
+
+	"company.vision": "Visi Kami",
+	"company.vision.description": "Menjadi perusahaan penyedia layanan jasa logistik yang berintegritas, berkualitas dan terkemuka di Indonesia, dengan senantiasa mengutamakan kepuasan konsumen, serta menjunjung tinggi kepercayaan mitra kerja.",
+
+	"company.mission": "Misi Kami",
+	"company.mission.title.1": "Kualitas",
+	"company.mission.title.2": "Delivery on Time",
+	"company.mission.title.3": "Sumber daya manusia",
+	"company.mission.title.4": "Aksesibilitas",
+	"company.mission.description.1": "Menyediakan pelayanan jasa logistik yang efektif dan efisien dalam meningkatkan kualitas saat proses pengiriman barang. Pelayanan yang berkualitas dapat memberikan tingkat terhadap konsumen.",
+	"company.mission.description.2": "Memberikan pelayanan jasa logistik secara tepat waktu dalam melakukan pengiriman barang dari port to door maupun door to door.",
+	"company.mission.description.3": "Membuka lapangan pekerjaan serta mengembangkan sumber daya manusia yang berkompeten, berintegritas, cerdas dan loyal.",
+	"company.mission.description.4": "Memberikan proses pengiriman barang yang mudah, ekonomis dan terpercaya sehingga para konsumen dapat menerima tingkat kualitas yang signifikan.",
+
+	"company.offer.provide.title.1": "Door To Port",
+	"company.offer.provide.title.2": "Door to Door",
+	"company.offer.provide.description.1": "Bentuk pelayanan ini dapat digunakan untuk tujuan pengiriman dalam dan luar negri, biasanya digunakan juga untuk jenis pengiriman cargo dan dapat melalui pengiriman udara, laut, dan darat.",
+	"company.offer.provide.description.2": "Bentuk pelayanan ini barang akan diambil oleh perusahaan jasa pengiriman ke alamat pengirim barang dan akan diantar hingga ke alamat penerima barang.",
+
+	"company.services.title.1": "Pengiriman Barang",
+	"company.services.title.2": "Transportasi Darat",
+	"company.services.title.3": "Jasa Pabean",
+	"company.services.description.1": "Perusahaan kami memberikan pelayanan jasa yang bergerak di dalam bidang angkutan dengan jenis pengiriman kargo berupa FCL, bulk, flat truk dan LCL. Kami melayani jasa pengiriman eskpor impor (internasional) melalui laut dan udara secara efektif dan efisien.",
+	"company.services.description.2": "Kami memiliki armada lebih dari 50+ baik 20 feet maupun 40 feet, yang sudah dimonitoring oleh GPS untuk memudahkan pelacakan pengiriman, real time dan efisiensi biaya. Salah satu misi kami memberikan kemudahan dan kepuasan untuk para importir dan eksportir.",
+	"company.services.description.3": "Kemudahan dalam pengurusan dokumen impor dan ekspor melalui laut dan udara. Prosedur yang telah terintegrasi oleh Bea Cukai sehingga dapat memberikan kepercayaan pelanggan dalam menggunakan jasa kami. Dimulai dari pengurusan pembuatan PIB ataupun PEB, DO, Asuransi dan pengiriman.",
+
+	"career.text": "Kirimkan CV anda ke ",
+	"career.join.us": "Bergabunglah bersama kami!"
 }
