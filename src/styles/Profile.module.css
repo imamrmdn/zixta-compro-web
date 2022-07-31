@@ -168,7 +168,7 @@
 
 	.ourVisionWrapper,
 	.ourMissionWrapper {
-		width: 50%;
+		width: 47.5%;
 	}
 
 	.companyCustomerContainer,
@@ -246,7 +246,10 @@
 		border-width: 0px;
 	}
 
-	.ourStoryItem,
+	.ourStoryItem {
+		width: 33.33%;
+	}
+
 	.galleryItem {
 		width: 23.5%;
 	}

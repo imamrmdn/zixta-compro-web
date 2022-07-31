@@ -1,0 +1,48 @@
+.contactWrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contactCardOffice {
+	width: 100%;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.contactCardForm {
+	width: 100%;
+	/* margin: 0px 0.5rem; */
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+	.contactWrapper {
+		margin-bottom: 2rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.contactWrapper {
+		justify-content: space-between;
+	}
+
+	.contactCardOffice {
+		width: 30%;
+		margin-left: 0.75rem;
+		border-width: 1px;
+		border-radius: 5px;
+	}
+
+	.contactCardForm {
+		width: 60%;
+		margin-right: 0.75rem;
+		border-width: 1px;
+		border-radius: 5px;
+	}
+}
+
+/* @media screen and (min-width: 1240px) {
+} */

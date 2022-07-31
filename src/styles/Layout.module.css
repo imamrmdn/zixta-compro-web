@@ -6,7 +6,7 @@
 .scrollContainer {
 	width: 100%;
 	padding: 0px 0.5rem;
-	position: fixed;
+	position: sticky;
 	z-index: 9;
 	box-shadow: 0 4px 8px rgb(50 50 93 / 5%);
 	background-color: white;
@@ -29,8 +29,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border-width: 1px;
-	border-color: red;
+	/* border-width: 1px; */
+	/* border-color: red; */
 }
 
 .companyNameContainer {
@@ -97,13 +97,14 @@
 
 .footer {
 	width: 100%;
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.25rem 0px;
-	border-width: 1px;
-	border-color: var(--primary-blue);
+	/* border-width: 1px; */
+	/* border-color: var(--primary-blue); */
 }
 
 .footerDescriptionWrapper {
@@ -145,7 +146,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 1em 0px;
-	margin-top: 1rem;
+	margin-bottom: 2rem;
 }
 
 .navbarContainer {
@@ -226,7 +227,7 @@
 	.scrollContainer,
 	.main,
 	.footer {
-		width: 75%;
+		width: 90%;
 		margin: auto;
 	}
 
@@ -252,7 +253,7 @@
 
 	.scrollContainer {
 		top: 0;
-		left: 12.5%;
+		left: 0%;
 	}
 
 	.footerDescriptionWrapper {
@@ -296,6 +297,14 @@
 }
 
 @media screen and (min-width: 1024px) {
+	.container,
+	.scrollContainer,
+	.main,
+	.footer {
+		width: 75%;
+		margin: auto;
+	}
+
 	.companyDescriptionSmallWrapper {
 		width: 50%;
 	}
