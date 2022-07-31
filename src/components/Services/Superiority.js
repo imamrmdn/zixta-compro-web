@@ -22,7 +22,7 @@ export default function Superiority() {
 
     return (
         <Box ref={companySuperiorityRef} className={isCompanySuperiorityVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-            <Heading as='h2' size='lg' textAlign="center" color="blue">Keunggulan</Heading>
+            <Heading mt="10" as='h2' size='lg' color="blue">Keunggulan</Heading>
             <Box className={styles.companySuperiorityContainer}>
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card

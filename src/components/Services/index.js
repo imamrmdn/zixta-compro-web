@@ -2,7 +2,8 @@ import { Box, Heading } from "@chakra-ui/react"
 
 import ListServices from "./ListServices"
 import Superiority from "./Superiority"
-import CareersComponent from "./Careers"
+import Careers from "./Careers"
+import Contact from "./Contact"
 
 export default function ServicesComponent() {
     return (
@@ -10,7 +11,8 @@ export default function ServicesComponent() {
             <Heading as='h2' size='lg' color="blue">Services</Heading>
             <ListServices />
             <Superiority />
-            <CareersComponent />
+            <Careers />
+            <Contact />
         </Box>
     )
 }
