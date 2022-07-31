@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useRouter } from "next/router"
 import Link from "next/link"
 import Image from 'next/image'
+import Chatra from '@chatra/chatra'
 import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure } from '@chakra-ui/react'
-import { ArrowForwardIcon, HamburgerIcon, PhoneIcon, TimeIcon, EmailIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, PhoneIcon, TimeIcon, EmailIcon } from '@chakra-ui/icons'
+import { SolutionOutlined, YoutubeOutlined } from '@ant-design/icons'
+import { useIntl } from 'react-intl'
 
 import SmallNavbar from "./SmallNavbar"
 
@@ -11,52 +14,67 @@ import logoImage from 'assets/ga-diajak.jpg'
 
 import styles from 'src/styles/Layout.module.css'
 
-const navbarList = [{
-    id: 'Home',
-    path: '/'
-},
-{
-    id: 'Profile',
-    path: '/profile'
-},
-{
-    id: 'Services',
-    path: '/services'
-},
-{
-    id: 'Careers',
-    path: '/services#career'
-},
-{
-    id: 'Contact',
-    path: '/contact'
-}]
-
 export default function Layout({ children }) {
-    const { locale, asPath, pathname } = useRouter()
+    const { locale, asPath } = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const { messages } = useIntl()
+
+    const navbarList = [{
+        id: messages["navbar.home"],
+        path: '/'
+    },
+    {
+        id: messages["navbar.profile"],
+        path: '/profile'
+    },
+    {
+        id: messages["navbar.services"],
+        path: '/services'
+    },
+    {
+        id: messages["navbar.career"],
+        path: '/services#career'
+    },
+    {
+        id: messages["navbar.contact"],
+        path: '/services#contact'
+    }]
 
     const [isScroll, setIsScroll] = useState(false)
+    const [hasMounted, setHasMounted] = useState(false);
 
     const menuLocalePath = locale === "id-ID" ? "en-US" : "id-ID"
     const menuLocaleName = locale === "id-ID" ? "ID" : "EN"
     const menuItemLocaleName = locale === "id-ID" ? "EN" : "ID"
 
     useEffect(() => {
+        setHasMounted(true)
+    }, [])
+
+    useEffect(() => {
+        if (window) {
+            window.ChatraSetup = {
+                disableChatOpenHash: true
+            }
+        }
+    }, [])
+
+    useEffect(() => {
         window?.addEventListener('scroll', handleScroll);
         return () => window?.removeEventListener('scroll', handleScroll);
     }, [])
 
-    const handleScroll = () => {
-        if (window?.pageYOffset > 160) {
+    const handleScroll = (e) => {
+        const { scrollY } = e.currentTarget
+        if (scrollY > 160) {
             setIsScroll(true)
         }
-        if (window?.pageYOffset === 0) {
+        if (scrollY === 0) {
             setIsScroll(false)
         }
     }
 
-    console.log(pathname)
+    if (!hasMounted) return null
 
     if (isOpen) {
         return <SmallNavbar onClose={onClose} />
@@ -120,9 +138,11 @@ export default function Layout({ children }) {
                 <Box mt="8" className={styles.navbarContainer}>
                     {navbarList.map(item => (
                         <Link href={item.path} key={item.id}>
-                            <a className={pathname === item.path ? styles.activeLink : styles.nonActiveLink}>
-                                {item.id}
-                            </a>
+                            {asPath &&
+                                <a className={asPath === item.path ? styles.activeLink : styles.nonActiveLink}>
+                                    {item.id}
+                                </a>
+                            }
                         </Link>
                     ))}
                 </Box>
@@ -140,28 +160,33 @@ export default function Layout({ children }) {
                     // className={styles.footerImage}
                     />
                     <Heading size="md" style={{ margin: '0.25em 0px' }}>
-                        PT Three Dot
+                        PT Zixta Logistics Services
                     </Heading>
                     <Box className={styles.footerAddress}>
-                        Millennium Centennial Center, Level 38. Jl. Jendral Sudirman Kav.25, Jakarta Selatan - 12920
+                        Jl. Enggano No.66, RT.4/RW.16, Tj. Priok, Kec. Tj. Priok, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14310
                     </Box>
                 </Box>
                 <Box className={styles.footerHelpWrapper}>
                     <Box className={styles.footerInfo}>
                         <Link href="/services#career">
-                            <Button leftIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline'>
-                                Carrers
+                            <Button leftIcon={<SolutionOutlined />} colorScheme='teal' variant='outline'>
+                                {messages["navbar.career"]}
+                            </Button>
+                        </Link>
+                        <Link href="/services#contact">
+                            <Button leftIcon={<PhoneIcon />} colorScheme='blue' variant='outline'>
+                                {messages["navbar.contact"]}
                             </Button>
                         </Link>
                         <Link href="/contact">
-                            <Button leftIcon={<ArrowForwardIcon />} colorScheme='blue' variant='outline'>
-                                Contact Us
+                            <Button leftIcon={<YoutubeOutlined />} colorScheme='blue' variant='outline'>
+                                YouTube
                             </Button>
                         </Link>
                     </Box>
-                    <Box className={styles.footerCopyright}>
-                        Copyright © 2022. PT Three Dot
-                    </Box>
+                </Box>
+                <Box className={styles.footerCopyright}>
+                    Copyright © 2022. PT Zixta Logistics Services
                 </Box>
             </footer>
         </>
