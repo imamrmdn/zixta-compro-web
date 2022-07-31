@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Box, Heading } from "@chakra-ui/react"
+import { Box, Heading, Text } from "@chakra-ui/react"
+import { useIntl } from 'react-intl'
 
 import styles from 'src/styles/Home.module.css'
 
@@ -9,13 +10,12 @@ import juggernautImage from 'assets/jugger.jpg'
 export default function WhyReason() {
     const [isCompanyReasonVisible, setisCompanyReasonVisible] = useState(false)
 
+    const { messages } = useIntl()
     const companyReasonRef = useRef()
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            // console.log('entry', entry);
-            // console.log('entry.isIntersecting', entry.isIntersecting);
             setisCompanyReasonVisible(entry.isIntersecting)
         });
 
@@ -23,10 +23,13 @@ export default function WhyReason() {
     }, [])
 
     return (
-        <Box mt="10" ref={companyReasonRef} className={isCompanyReasonVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+        <Box mt="10" padding="0px 0.5rem" ref={companyReasonRef} className={isCompanyReasonVisible && `animate__animated  animate__slideInLeft animate__slow`}>
             <Heading as='h2' size='lg' textAlign='center'>
-                Kenapa Harus Three Dot?
+                Why Zixta?
             </Heading>
+            <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1">
+                {messages["company.why.reason"]}
+            </Text>
             <Box className={styles.companyReasonContainer}>
                 <Box className={styles.companyReasonItemWrapper}>
                     <Box mx="1" width={125}>
@@ -40,10 +43,10 @@ export default function WhyReason() {
                     </Box>
                     <Box mx='1'>
                         <Heading as='h2' size='md' color='blue'>
-                            Layanan 24/7
+                            {messages["company.why.reason.title.1"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
-                            Pemesanan pengiriman peti kemas bisa dilakukan setiap saat
+                            {messages["company.why.reason.description.1"]}
                         </Box>
                     </Box>
                 </Box>
@@ -59,10 +62,10 @@ export default function WhyReason() {
                     </Box>
                     <Box mx='1'>
                         <Heading as='h2' size='md' color='blue'>
-                            Pembayaran Aman
+                            {messages["company.why.reason.title.2"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
-                            Nikmati sistem pembayaran yang mudah, aman, dan transparan
+                            {messages["company.why.reason.description.2"]}
                         </Box>
                     </Box>
                 </Box>
@@ -78,10 +81,10 @@ export default function WhyReason() {
                     </Box>
                     <Box mx='1'>
                         <Heading as='h2' size='md' color='blue'>
-                            Harga Kompetitif
+                            {messages["company.why.reason.title.3"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
-                            Temukan daftar penyedia layanan dengan penawaran harga yang hemat
+                            {messages["company.why.reason.description.3"]}
                         </Box>
                     </Box>
                 </Box>
@@ -97,10 +100,10 @@ export default function WhyReason() {
                     </Box>
                     <Box mx='1'>
                         <Heading as='h2' size='md' color='blue'>
-                            Layanan Seluruh Indonesia
+                            {messages["company.why.reason.title.4"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
-                            Rasakan keuntungan menggunakan platform kami di mana pun Anda berada
+                            {messages["company.why.reason.description.4"]}
                         </Box>
                     </Box>
                 </Box>
