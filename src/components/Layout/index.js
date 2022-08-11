@@ -97,14 +97,15 @@ export default function Layout({ children }) {
                 <Box className={styles.companyNameContainer}>
                     <Box className={styles.companyNameWrapper}>
                         <Box className={styles.companyNameLogo}>
-                            {/* <Image
+                            <Image
                                 src={logoImage}
                                 alt="logo image"
-                                layout='intrinsic'
-                                width='100%'
-                                height='100%'
-                            /> */}
-                            <img src={logoImage.src} />
+                            // layout='fixed'
+                            // width={175}
+                            // height={175}
+                            // width='100%'
+                            // height='100%'
+                            />
                         </Box>
                         <Heading as='h2' size='md' marginLeft='0.5em' className={styles.companyNameTitle}>
                             Zixta Logistics Services
