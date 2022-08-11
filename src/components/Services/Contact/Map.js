@@ -56,7 +56,7 @@ export default function MapComponent() {
 
     if (typeof window !== undefined) {
         return (
-            <Box p={5} mt="4" h="72" shadow='sm' className={styles.contactCardForm}>
+            <Box p={5} mt="4" shadow='sm' className={styles.contactCardForm}>
                 <MapContainer center={[
                     45.383321536272049,
                     -75.3372987731628
