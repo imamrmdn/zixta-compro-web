@@ -10,6 +10,7 @@ import styles from 'src/styles/Home.module.css'
 const settings = {
     dots: false,
     autoplay: true,
+    autoplaySpeed: 1500,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
