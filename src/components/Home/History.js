@@ -3,7 +3,8 @@ import { Box, Heading, Text } from "@chakra-ui/react"
 import Image from "next/image"
 import { useIntl } from 'react-intl'
 
-import logoImage from 'assets/ga-diajak.jpg'
+// import logoImage from 'assets/ga-diajak.jpg'
+import logoImage from 'assets/logo.png'
 
 // import styles from 'src/styles/Home.module.css'
 
