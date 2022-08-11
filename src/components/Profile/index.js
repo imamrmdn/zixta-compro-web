@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Box, Heading } from "@chakra-ui/react"
+import { useIntl } from 'react-intl'
 
 import StoryComponent from "./Story"
 import TrustedComponent from "./Trusted"
@@ -13,6 +14,7 @@ import styles from 'src/styles/Profile.module.css'
 export default function ProfileComponent() {
     const [isCompanyTypeVisible, setisCompanyTypeVisible] = useState(false)
 
+    const { messages } = useIntl()
     const companyTypeRef = useRef()
 
     useEffect(() => {
@@ -28,7 +30,7 @@ export default function ProfileComponent() {
 
     return (
         <Box style={{ width: '100%' }}>
-            <Heading as='h2' size='lg' color="blue">Profile</Heading>
+            <Heading as='h2' size='lg' color="blue">{messages["navbar.profile"]}</Heading>
             <OurPurpose />
 
             <StoryComponent />

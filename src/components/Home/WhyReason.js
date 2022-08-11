@@ -25,7 +25,7 @@ export default function WhyReason() {
     return (
         <Box mt="10" padding="0px 0.5rem" ref={companyReasonRef} className={isCompanyReasonVisible && `animate__animated  animate__slideInLeft animate__slow`}>
             <Heading as='h2' size='lg' textAlign='center'>
-                Why Zixta?
+                {messages["company.why.title"]}
             </Heading>
             <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1">
                 {messages["company.why.reason"]}

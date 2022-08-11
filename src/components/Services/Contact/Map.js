@@ -6,7 +6,7 @@ import {
 // import { MailOutlined, UserOutlined, PhoneOutlined } from '@ant-design/icons'
 // import { CheckIcon } from '@chakra-ui/icons'
 import Leaflet from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 // import { Icon } from "leaflet";
 
 import icon from 'leaflet/dist/images/marker-icon.png';
