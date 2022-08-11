@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from "next/router"
 import Link from "next/link"
 import Image from 'next/image'
-import Chatra from '@chatra/chatra'
+// import Chatra from '@chatra/chatra'
 import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure } from '@chakra-ui/react'
 import { HamburgerIcon, PhoneIcon, TimeIcon, EmailIcon } from '@chakra-ui/icons'
 import { SolutionOutlined, YoutubeOutlined } from '@ant-design/icons'
@@ -15,7 +15,7 @@ import logoImage from 'assets/ga-diajak.jpg'
 import styles from 'src/styles/Layout.module.css'
 
 export default function Layout({ children }) {
-    const { locale, asPath } = useRouter()
+    const { locale, asPath, push } = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { messages } = useIntl()
 
@@ -74,6 +74,10 @@ export default function Layout({ children }) {
         }
     }
 
+    const goToContact = () => {
+        push('/contact')
+    }
+
     if (!hasMounted) return null
 
     if (isOpen) {
@@ -101,7 +105,7 @@ export default function Layout({ children }) {
                     <Box className={styles.languageContainer}>
                         <Box className={styles.companyDescriptionLargeContainer}>
                             <Box className={styles.companyDescriptionLargeWrapper}>
-                                <Box className={styles.companyDescriptionLargeItem}><PhoneIcon boxSize={5} /></Box>
+                                <Box className={styles.companyDescriptionLargeItem}><PhoneIcon onClick={goToContact} boxSize={5} cursor="pointer" /></Box>
                                 <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box>
                                 <Box className={styles.companyDescriptionLargeItem}><EmailIcon boxSize={5} /></Box>
                             </Box>
@@ -178,11 +182,11 @@ export default function Layout({ children }) {
                                 {messages["navbar.contact"]}
                             </Button>
                         </Link>
-                        <Link href="/contact">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=hetoEq_vrMc&ab_channel=SoundsFromTheCorner" rel="noopener noreferrer">
                             <Button leftIcon={<YoutubeOutlined />} colorScheme='blue' variant='outline'>
                                 YouTube
                             </Button>
-                        </Link>
+                        </a>
                     </Box>
                 </Box>
                 <Box className={styles.footerCopyright}>
