@@ -3,14 +3,19 @@ import { useRouter } from "next/router"
 import Link from "next/link"
 import Image from 'next/image'
 // import Chatra from '@chatra/chatra'
-import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure } from '@chakra-ui/react'
-import { HamburgerIcon, PhoneIcon, TimeIcon, EmailIcon } from '@chakra-ui/icons'
+import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure, useBreakpointValue } from '@chakra-ui/react'
+import {
+    HamburgerIcon, PhoneIcon,
+    // TimeIcon, 
+    EmailIcon
+} from '@chakra-ui/icons'
 import { SolutionOutlined, YoutubeOutlined } from '@ant-design/icons'
 import { useIntl } from 'react-intl'
 
 import SmallNavbar from "./SmallNavbar"
 
-import logoImage from 'assets/ga-diajak.jpg'
+// import logoImage from 'assets/ga-diajak.jpg'
+import logoImage from 'assets/logo.png'
 
 import styles from 'src/styles/Layout.module.css'
 
@@ -18,6 +23,8 @@ export default function Layout({ children }) {
     const { locale, asPath, push } = useRouter()
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { messages } = useIntl()
+
+    const buttonFooterSize = useBreakpointValue(['sm', 'md'])
 
     const navbarList = [{
         id: messages["navbar.home"],
@@ -89,16 +96,17 @@ export default function Layout({ children }) {
             <header className={isScroll ? styles.scrollContainer : styles.container}>
                 <Box className={styles.companyNameContainer}>
                     <Box className={styles.companyNameWrapper}>
-                        <Box w={55} className={styles.companyNameLogo}>
-                            <Image
+                        <Box className={styles.companyNameLogo}>
+                            {/* <Image
                                 src={logoImage}
                                 alt="logo image"
-                                layout='responsive'
-                                width='10%'
-                                height='10%'
-                            />
+                                layout='intrinsic'
+                                width='100%'
+                                height='100%'
+                            /> */}
+                            <img src={logoImage.src} />
                         </Box>
-                        <Heading as='h2' size='md' marginLeft='0.5em' width="60%" className={styles.companyNameTitle}>
+                        <Heading as='h2' size='md' marginLeft='0.5em' className={styles.companyNameTitle}>
                             Zixta Logistics Services
                         </Heading>
                     </Box>
@@ -106,7 +114,7 @@ export default function Layout({ children }) {
                         <Box className={styles.companyDescriptionLargeContainer}>
                             <Box className={styles.companyDescriptionLargeWrapper}>
                                 <Box className={styles.companyDescriptionLargeItem}><PhoneIcon onClick={goToContact} boxSize={5} cursor="pointer" /></Box>
-                                <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box>
+                                {/* <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box> */}
                                 <Box className={styles.companyDescriptionLargeItem}><EmailIcon boxSize={5} /></Box>
                             </Box>
                         </Box>
@@ -135,7 +143,7 @@ export default function Layout({ children }) {
                 <Box className={styles.companyDescriptionSmallContainer}>
                     <Box className={styles.companyDescriptionSmallWrapper}>
                         <Box className={styles.companyDescriptionSmallItem}>Contact Us</Box>
-                        <Box className={styles.companyDescriptionSmallItem}>Working Hours</Box>
+                        {/* <Box className={styles.companyDescriptionSmallItem}>Working Hours</Box> */}
                         <Box className={styles.companyDescriptionSmallItem}>Email Us</Box>
                     </Box>
                 </Box>
@@ -172,18 +180,18 @@ export default function Layout({ children }) {
                 </Box>
                 <Box className={styles.footerHelpWrapper}>
                     <Box className={styles.footerInfo}>
-                        <Link href="/services#career">
-                            <Button leftIcon={<SolutionOutlined />} colorScheme='teal' variant='outline'>
+                        <Link className={styles.footerInfoItem} href="/services#career">
+                            <Button size={buttonFooterSize} leftIcon={<SolutionOutlined />} colorScheme='teal' variant='outline'>
                                 {messages["navbar.career"]}
                             </Button>
                         </Link>
-                        <Link href="/services#contact">
-                            <Button leftIcon={<PhoneIcon />} colorScheme='blue' variant='outline'>
+                        <Link className={styles.footerInfoItem} href="/services#contact">
+                            <Button size={buttonFooterSize} leftIcon={<PhoneIcon />} colorScheme='blue' variant='outline'>
                                 {messages["navbar.contact"]}
                             </Button>
                         </Link>
                         <a target="_blank" href="https://www.youtube.com/watch?v=hetoEq_vrMc&ab_channel=SoundsFromTheCorner" rel="noopener noreferrer">
-                            <Button leftIcon={<YoutubeOutlined />} colorScheme='blue' variant='outline'>
+                            <Button size={buttonFooterSize} leftIcon={<YoutubeOutlined />} colorScheme='blue' variant='outline'>
                                 YouTube
                             </Button>
                         </a>
