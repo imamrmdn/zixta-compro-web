@@ -33,6 +33,11 @@
 	min-height: 275px;
 }
 
+.displayArrowForwardIcon,
+.displayArrowDownIcon {
+	color: var(--primary-blue) !important;
+}
+
 .displayArrowForwardIcon {
 	display: none !important;
 }
