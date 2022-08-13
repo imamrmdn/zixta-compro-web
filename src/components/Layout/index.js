@@ -85,6 +85,10 @@ export default function Layout({ children }) {
         push('/contact')
     }
 
+    const goToEmail = () => {
+        push('mailto:email@yahoo.com')
+    }
+
     if (!hasMounted) return null
 
     if (isOpen) {
@@ -116,7 +120,7 @@ export default function Layout({ children }) {
                             <Box className={styles.companyDescriptionLargeWrapper}>
                                 <Box className={styles.companyDescriptionLargeItem}><PhoneIcon onClick={goToContact} boxSize={5} cursor="pointer" /></Box>
                                 {/* <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box> */}
-                                <Box className={styles.companyDescriptionLargeItem}><EmailIcon boxSize={5} /></Box>
+                                <Box className={styles.companyDescriptionLargeItem}><EmailIcon onClick={goToEmail} boxSize={5} cursor="pointer" /></Box>
                             </Box>
                         </Box>
                         <Box as={Menu}>
@@ -143,9 +147,9 @@ export default function Layout({ children }) {
                 </Box>
                 <Box className={styles.companyDescriptionSmallContainer}>
                     <Box className={styles.companyDescriptionSmallWrapper}>
-                        <Box className={styles.companyDescriptionSmallItem}>Contact Us</Box>
+                        <Box className={styles.companyDescriptionSmallItem} onClick={goToContact}>Contact Us</Box>
                         {/* <Box className={styles.companyDescriptionSmallItem}>Working Hours</Box> */}
-                        <Box className={styles.companyDescriptionSmallItem}>Email Us</Box>
+                        <Box className={styles.companyDescriptionSmallItem} onClick={goToEmail}>Email Us</Box>
                     </Box>
                 </Box>
                 <Box mt="8" className={styles.navbarContainer}>
@@ -182,17 +186,19 @@ export default function Layout({ children }) {
                 <Box className={styles.footerHelpWrapper}>
                     <Box className={styles.footerInfo}>
                         <Link className={styles.footerInfoItem} href="/services#career">
-                            <Button size={buttonFooterSize} leftIcon={<SolutionOutlined />} colorScheme='teal' variant='outline'>
+                            <Button size={buttonFooterSize} leftIcon={<SolutionOutlined />} variant='outline'>
                                 {messages["navbar.career"]}
                             </Button>
                         </Link>
-                        <Link className={styles.footerInfoItem} href="/services#contact">
-                            <Button size={buttonFooterSize} leftIcon={<PhoneIcon />} colorScheme='blue' variant='outline'>
+                        {/* <Link className={styles.footerInfoItem} href="/services#contact"> */}
+                        <a target="_blank" href="https://wa.me/085889167838" rel="noopener noreferrer">
+                            <Button size={buttonFooterSize} leftIcon={<PhoneIcon />} variant='outline'>
                                 {messages["navbar.contact"]}
                             </Button>
-                        </Link>
+                        </a>
+                        {/* </Link> */}
                         <a target="_blank" href="https://www.youtube.com/watch?v=hetoEq_vrMc&ab_channel=SoundsFromTheCorner" rel="noopener noreferrer">
-                            <Button size={buttonFooterSize} leftIcon={<YoutubeOutlined />} colorScheme='blue' variant='outline'>
+                            <Button size={buttonFooterSize} leftIcon={<YoutubeOutlined />} variant='outline'>
                                 YouTube
                             </Button>
                         </a>

@@ -22,7 +22,7 @@ export default function Superiority() {
 
     return (
         <Box ref={companySuperiorityRef} className={isCompanySuperiorityVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-            <Heading mt="10" as='h2' size='lg' color="blue">Keunggulan</Heading>
+            <Heading mt="10" as='h2' size='lg'>Keunggulan</Heading>
             <Box className={styles.companySuperiorityContainer}>
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card
@@ -30,32 +30,32 @@ export default function Superiority() {
                         desc={`Tentukan jadwal & rute pengiriman darat atau laut Anda pada kotak pencarian kami`}
                     />
                 </Box>
-                <Icon as={ArrowForwardIcon} boxSize={7} color="blue.400" my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
-                <Icon as={ArrowDownIcon} boxSize={7} color="blue.400" my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
+                <Icon as={ArrowForwardIcon} boxSize={7} my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
+                <Icon as={ArrowDownIcon} boxSize={7} my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card
                         title="Bandingkan Harga"
                         desc={`Pilih layanan logistik yang sesuai kebutuhan Anda dari berbagai mitra logistik terpercaya kami`}
                     />
                 </Box>
-                <Icon as={ArrowForwardIcon} boxSize={7} color="blue.400" my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
-                <Icon as={ArrowDownIcon} boxSize={7} color="blue.400" my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
+                <Icon as={ArrowForwardIcon} boxSize={7} my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
+                <Icon as={ArrowDownIcon} boxSize={7} my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card
                         title="Pesan Langsung"
                         desc={`Periksa kembali detail pesanan kemudian selesaikan proses pemesanan Anda`}
                     />
                 </Box>
-                <Icon as={ArrowForwardIcon} boxSize={7} color="blue.400" my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
-                <Icon as={ArrowDownIcon} boxSize={7} color="blue.400" my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
+                <Icon as={ArrowForwardIcon} boxSize={7} my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
+                <Icon as={ArrowDownIcon} boxSize={7} my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card
                         title="Bayar Aman"
                         desc={`Tim kami akan segera menghubungi Anda untuk proses pembayaran yang aman & transparan`}
                     />
                 </Box>
-                <Icon as={ArrowForwardIcon} boxSize={7} color="blue.400" my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
-                <Icon as={ArrowDownIcon} boxSize={7} color="blue.400" my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
+                <Icon as={ArrowForwardIcon} boxSize={7} my="auto" mx="0.5" className={styles.displayArrowForwardIcon} />
+                <Icon as={ArrowDownIcon} boxSize={7} my="1.5" mx="auto" className={styles.displayArrowDownIcon} />
                 <Box className={styles.companySuperiorityItemWrapper}>
                     <Card
                         title="Pesanan Selesai"

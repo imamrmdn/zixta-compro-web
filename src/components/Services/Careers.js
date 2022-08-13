@@ -18,13 +18,14 @@ export default function Careers() {
     }, [])
 
     return (
-        <Box id="career">
-            <Box ref={companyCareersRef} mt="16" className={isCompanyCareersVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
-                <Heading as='h2' size='lg' color="blue">{messages["navbar.career"]}</Heading>
+        <>
+            <Box id="career" style={{ height: '9.5em' }} />
+            <Box ref={companyCareersRef} className={isCompanyCareersVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
+                <Heading as='h2' size='lg'>{messages["navbar.career"]}</Heading>
                 <Text mt={4} ml={2}>Apply Now!</Text>
                 <Text mt={2} ml={2}>{messages["career.text"]} recruitment.zixtalog@gmail.com</Text>
                 <Text mt={2} ml={2}>{messages["career.join.us"]}</Text>
             </Box>
-        </Box>
+        </>
     )
 }

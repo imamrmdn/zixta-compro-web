@@ -8,7 +8,7 @@ import Contact from "./Contact"
 export default function ServicesComponent() {
     return (
         <Box style={{ width: '100%' }}>
-            <Heading as='h2' size='lg' color="blue">Services</Heading>
+            <Heading as='h2' size='lg'>Services</Heading>
             <ListServices />
             <Superiority />
             <Careers />

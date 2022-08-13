@@ -30,7 +30,7 @@ export default function ProfileComponent() {
 
     return (
         <Box style={{ width: '100%' }}>
-            <Heading as='h2' size='lg' color="blue">{messages["navbar.profile"]}</Heading>
+            <Heading as='h2' size='lg'>{messages["navbar.profile"]}</Heading>
             <OurPurpose />
 
             <StoryComponent />

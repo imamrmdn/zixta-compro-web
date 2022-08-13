@@ -42,7 +42,7 @@ export default function WhyReason() {
                         />
                     </Box>
                     <Box mx='1'>
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.why.reason.title.1"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
@@ -61,7 +61,7 @@ export default function WhyReason() {
                         />
                     </Box>
                     <Box mx='1'>
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.why.reason.title.2"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
@@ -80,7 +80,7 @@ export default function WhyReason() {
                         />
                     </Box>
                     <Box mx='1'>
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.why.reason.title.3"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>
@@ -99,7 +99,7 @@ export default function WhyReason() {
                         />
                     </Box>
                     <Box mx='1'>
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.why.reason.title.4"]}
                         </Heading>
                         <Box className={styles.companyReasonItemSubTitle}>

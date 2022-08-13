@@ -12,7 +12,7 @@ import History from "./History"
 export default function HomeComponent() {
     return (
         <Box>
-            <Heading as='h2' size='lg' color="blue">Zixta Logistics Services</Heading>
+            <Heading as='h2' size='lg'>Zixta Logistics Services</Heading>
             <Box my="2">Your Logistics Partner - Delivery on Time</Box>
 
             <HomeCarousel />

@@ -52,7 +52,7 @@ export default function HomeCarousel() {
 
 function Card({ title, desc, ...rest }) {
     return (
-        <Box p={3} shadow='md' backgroundColor="white" borderWidth='1px' borderLeft="10px solid blue" borderRadius='10px' {...rest}>
+        <Box p={3} shadow='md' backgroundColor="white" borderWidth='1px' borderLeft="10px solid" borderColor="#037dc6" borderRadius='10px' {...rest}>
             <Heading fontSize='md'>{title}</Heading>
             <Text mt={2} fontSize="sm" borderTopWidth="1px">{desc}</Text>
         </Box>

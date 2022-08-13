@@ -35,7 +35,7 @@ export default function ListServices() {
                         />
                     </Box>
                     <Box ml="3" mr="1">
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.services.title.1"]}
                         </Heading>
                         <Box className={styles.companyServicesItemSubTitle}>
@@ -54,7 +54,7 @@ export default function ListServices() {
                         />
                     </Box>
                     <Box ml="3" mr="1">
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.services.title.2"]}
                         </Heading>
                         <Box className={styles.companyServicesItemSubTitle}>
@@ -73,7 +73,7 @@ export default function ListServices() {
                         />
                     </Box>
                     <Box ml="3" mr="1">
-                        <Heading as='h2' size='md' color='blue'>
+                        <Heading as='h2' size='md'>
                             {messages["company.services.title.3"]}
                         </Heading>
                         <Box className={styles.companyServicesItemSubTitle}>

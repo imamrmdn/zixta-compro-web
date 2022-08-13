@@ -25,20 +25,23 @@ export default function Contact() {
     }, [])
 
     return (
-        <Box id="contact" mt="16" ref={companyContactRef} className={isCompanyContactVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
-            <Heading as='h2' size='lg' color="blue">{messages["navbar.contact"]}</Heading>
-            <Box className={styles.contactWrapper}>
-                <Box p={5} mt="4" shadow='sm' className={styles.contactCardOffice}>
-                    <Heading fontSize='xl' textAlign="center" height="6">Head Office</Heading>
-                    <Text mt="2" textAlign="center">Jl. Enggano No.66, RT.4/RW.16, Tj. Priok, Kec. Tj. Priok, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14310</Text>
+        <>
+            <Box id="contact" style={{ height: '9.5em' }} />
+            <Box ref={companyContactRef} className={isCompanyContactVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
+                <Heading as='h2' size='lg'>{messages["navbar.contact"]}</Heading>
+                <Box className={styles.contactWrapper}>
+                    <Box p={5} mt="4" shadow='sm' className={styles.contactCardOffice}>
+                        <Heading fontSize='xl' textAlign="center" height="6">Head Office</Heading>
+                        <Text mt="2" textAlign="center">Jl. Enggano No.66, RT.4/RW.16, Tj. Priok, Kec. Tj. Priok, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14310</Text>
 
-                    <Heading mt="6" fontSize='xl' textAlign="center" height="6">Branch Office</Heading>
-                    <Text mt="2" textAlign="center">Jl. Pasir Putih Raya Blok E-5d No. 13 (Ruko Kobexindo), Kelurahan Ancol, Kecamatan Pademangan, Kota Jakarta Utara, DKI Jakarta, 14430</Text>
+                        <Heading mt="6" fontSize='xl' textAlign="center" height="6">Branch Office</Heading>
+                        <Text mt="2" textAlign="center">Jl. Pasir Putih Raya Blok E-5d No. 13 (Ruko Kobexindo), Kelurahan Ancol, Kecamatan Pademangan, Kota Jakarta Utara, DKI Jakarta, 14430</Text>
+                    </Box>
+
+                    <MapWithNoSSR />
+                    {/* <MapComponent /> */}
                 </Box>
-
-                <MapWithNoSSR />
-                {/* <MapComponent /> */}
-            </Box>
-        </Box >
+            </Box >
+        </>
     )
 }
