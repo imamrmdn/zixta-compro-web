@@ -5,6 +5,11 @@
 	justify-content: center;
 }
 
+.ourContact {
+	width: 100%;
+	position: relative;
+}
+
 .contactCardOffice {
 	width: 100%;
 	border-width: 1px;
@@ -21,12 +26,22 @@
 }
 
 @media screen and (min-width: 768px) {
+	.ourContact {
+		width: 90%;
+		margin: auto;
+	}
+
 	.contactWrapper {
 		margin-bottom: 2rem;
 	}
 }
 
 @media screen and (min-width: 1024px) {
+	.ourContact {
+		width: 75%;
+		margin: auto;
+	}
+
 	.contactWrapper {
 		justify-content: space-between;
 	}
