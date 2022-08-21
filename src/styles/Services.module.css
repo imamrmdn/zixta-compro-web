@@ -33,6 +33,13 @@
 	min-height: 275px;
 }
 
+.ourService,
+.ourSuperiority,
+.ourCareer {
+	width: 100%;
+	position: relative;
+}
+
 .displayArrowForwardIcon,
 .displayArrowDownIcon {
 	color: var(--primary-blue) !important;
@@ -47,6 +54,13 @@
 }
 
 @media screen and (min-width: 768px) {
+	.ourService,
+	.ourSuperiority,
+	.ourCareer {
+		width: 90%;
+		margin: auto;
+	}
+
 	.companySuperiorityItemWrapper {
 		width: 27.5%;
 		margin-top: 1.5em;
@@ -65,6 +79,13 @@
 } */
 
 @media screen and (min-width: 1024px) {
+	.ourService,
+	.ourSuperiority,
+	.ourCareer {
+		width: 75%;
+		margin: auto;
+	}
+
 	.companyServicesItemWrapper {
 		width: 50%;
 		height: 175px;

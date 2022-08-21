@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react"
 import { Box, Text, Heading } from "@chakra-ui/react"
 import { useIntl } from 'react-intl'
 
+import styles from 'src/styles/Services.module.css'
+
 export default function Careers() {
     const [isCompanyCareersVisible, setisCompanyCareersVisible] = useState(false)
 
@@ -18,7 +20,7 @@ export default function Careers() {
     }, [])
 
     return (
-        <>
+        <Box className={styles.ourCareer}>
             <Box id="career" style={{ height: '9.5em' }} />
             <Box ref={companyCareersRef} className={isCompanyCareersVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.career"]}</Heading>
@@ -26,6 +28,6 @@ export default function Careers() {
                 <Text mt={2} ml={2}>{messages["career.text"]} recruitment.zixtalog@gmail.com</Text>
                 <Text mt={2} ml={2}>{messages["career.join.us"]}</Text>
             </Box>
-        </>
+        </Box>
     )
 }

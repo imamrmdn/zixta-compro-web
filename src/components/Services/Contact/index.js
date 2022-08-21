@@ -25,7 +25,7 @@ export default function Contact() {
     }, [])
 
     return (
-        <>
+        <Box className={styles.ourContact}>
             <Box id="contact" style={{ height: '9.5em' }} />
             <Box ref={companyContactRef} className={isCompanyContactVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.contact"]}</Heading>
@@ -42,6 +42,6 @@ export default function Contact() {
                     {/* <MapComponent /> */}
                 </Box>
             </Box >
-        </>
+        </Box>
     )
 }
