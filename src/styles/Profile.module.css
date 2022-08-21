@@ -10,6 +10,15 @@
 	/* padding: 0px 0.5rem; */
 }
 
+.ourPurpose,
+.ourStory,
+.ourGallery,
+.ourType,
+.trustedBy {
+	width: 100%;
+	position: relative;
+}
+
 .profileSubTitle {
 	text-align: center;
 	font-weight: 600;
@@ -165,6 +174,14 @@
 	/* .ourPurposeContainer {
 		align-items: center;
 	} */
+	.ourPurpose,
+	.ourStory,
+	.ourType,
+	.ourGallery,
+	.trustedBy {
+		width: 90%;
+		margin: auto;
+	}
 
 	.ourVisionWrapper,
 	.ourMissionWrapper {
@@ -208,6 +225,15 @@
 }
 
 @media screen and (min-width: 1024px) {
+	.ourPurpose,
+	.ourStory,
+	.ourType,
+	.ourGallery,
+	.trustedBy {
+		width: 75%;
+		margin: auto;
+	}
+
 	.companyCustomerContainer {
 		padding: 1rem;
 	}

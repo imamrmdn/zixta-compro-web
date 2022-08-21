@@ -22,29 +22,31 @@ export default function Gallery() {
     }, [])
 
     return (
-        <Box mt="12" ref={companyGalleryRef} className={isCompanyGalleryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-            <Heading as='h2' size='lg' textAlign="center">Gallery</Heading>
-            <Box mt="8" className={styles.galleryWrapper}>
-                <Box
-                    p={5}
-                    backgroundImage={`url(${juggernautImage.src})`}
-                    className={styles.galleryItem}
-                />
-                <Box
-                    p={5}
-                    backgroundImage={`url(${juggernautImage.src})`}
-                    className={styles.galleryItem}
-                />
-                <Box
-                    p={5}
-                    backgroundImage={`url(${juggernautImage.src})`}
-                    className={styles.galleryItem}
-                />
-                <Box
-                    p={5}
-                    backgroundImage={`url(${juggernautImage.src})`}
-                    className={styles.galleryItem}
-                />
+        <Box className={styles.ourGallery}>
+            <Box mt="12" ref={companyGalleryRef} className={isCompanyGalleryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+                <Heading as='h2' size='lg' textAlign="center">Gallery</Heading>
+                <Box mt="8" className={styles.galleryWrapper}>
+                    <Box
+                        p={5}
+                        backgroundImage={`url(${juggernautImage.src})`}
+                        className={styles.galleryItem}
+                    />
+                    <Box
+                        p={5}
+                        backgroundImage={`url(${juggernautImage.src})`}
+                        className={styles.galleryItem}
+                    />
+                    <Box
+                        p={5}
+                        backgroundImage={`url(${juggernautImage.src})`}
+                        className={styles.galleryItem}
+                    />
+                    <Box
+                        p={5}
+                        backgroundImage={`url(${juggernautImage.src})`}
+                        className={styles.galleryItem}
+                    />
+                </Box>
             </Box>
         </Box>
     )
