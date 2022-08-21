@@ -26,39 +26,41 @@ export default function Partner() {
 
     return (
         <Box mt="8" ref={companyPartnerRef} className={isCompanyPartnerVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-            <Heading as='h2' mb="2" size='lg' textAlign='center'>
-                {messages["company.partner"]}
-            </Heading>
-            <Box className={styles.companyPartnerContainer}>
-                <Box p={5} shadow='md' borderWidth='1px' borderRadius='10px' className={styles.companyPartnerWrapper}>
-                    <Box className={styles.companyPartnerItem}>
-                        <Image
-                            src={juggernautImage}
-                            alt="jugger image"
-                            layout="fixed"
-                            width={150}
-                            height={125}
-                        />
-                    </Box>
+            <Box className={styles.companyPartner}>
+                <Heading as='h2' mb="2" size='lg' textAlign='center'>
+                    {messages["company.partner"]}
+                </Heading>
+                <Box className={styles.companyPartnerContainer}>
+                    <Box p={5} shadow='md' borderWidth='1px' borderRadius='10px' className={styles.companyPartnerWrapper}>
+                        <Box className={styles.companyPartnerItem}>
+                            <Image
+                                src={juggernautImage}
+                                alt="jugger image"
+                                layout="fixed"
+                                width={150}
+                                height={125}
+                            />
+                        </Box>
 
-                    <Box className={styles.companyPartnerItem}>
-                        <Image
-                            src={juggernautImage}
-                            alt="jugger image"
-                            layout="fixed"
-                            width={150}
-                            height={125}
-                        />
-                    </Box>
+                        <Box className={styles.companyPartnerItem}>
+                            <Image
+                                src={juggernautImage}
+                                alt="jugger image"
+                                layout="fixed"
+                                width={150}
+                                height={125}
+                            />
+                        </Box>
 
-                    <Box className={styles.companyPartnerItem}>
-                        <Image
-                            src={juggernautImage}
-                            alt="jugger image"
-                            layout="fixed"
-                            width={150}
-                            height={125}
-                        />
+                        <Box className={styles.companyPartnerItem}>
+                            <Image
+                                src={juggernautImage}
+                                alt="jugger image"
+                                layout="fixed"
+                                width={150}
+                                height={125}
+                            />
+                        </Box>
                     </Box>
                 </Box>
             </Box>

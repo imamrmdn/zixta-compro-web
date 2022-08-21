@@ -2,15 +2,16 @@ import Image from "next/image"
 import { Box, Text, Heading } from "@chakra-ui/react"
 import Slider from "react-slick"
 
-import juggernautImage from 'assets/jugger.jpg'
-import shadowFiendImage from 'assets/sf.jpg'
+import Foto1Image from 'assets/foto-1.jpeg'
+import Foto2Image from 'assets/foto-2.jpeg'
+import Foto3Image from 'assets/foto-3.jpeg'
 
 import styles from 'src/styles/Home.module.css'
 
 const settings = {
     dots: false,
-    autoplay: true,
-    autoplaySpeed: 1500,
+    // autoplay: true,
+    // autoplaySpeed: 1500,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -21,31 +22,43 @@ const settings = {
 
 export default function HomeCarousel() {
     return (
-        <Box className={styles.carouselWrapper} >
-            <Slider {...settings}>
-                <Box className={styles.carouselSlider}>
-                    <Card className={styles.carouselText} title="Zixta Logistics Services" desc="YOUR LOGISTICS PARTNER – DELIVERY ON TIME" />
-                    <Image
-                        src={juggernautImage}
-                        alt="jugger image"
-                        layout="responsive"
-                        objectFit="cover"
-                        width="100%"
-                        height='75%'
-                    />
-                </Box>
-                <Box className={styles.carouselSlider}>
-                    <Card className={styles.carouselText} title="Zixta Logistics Services" desc="YOUR LOGISTICS PARTNER – DELIVERY ON TIME" />
-                    <Image
-                        src={shadowFiendImage}
-                        alt="sf image"
-                        layout="responsive"
-                        objectFit="cover"
-                        width="100%"
-                        height='75%'
-                    />
-                </Box>
-            </Slider>
+        <Box className={styles.companyCarousel}>
+            <Heading as='h2' size='lg'>Zixta Logistics Services</Heading>
+            <Box my="2">Your Logistics Partner - Delivery on Time</Box>
+            <Box className={styles.carouselWrapper}>
+                <Slider {...settings}>
+                    <Box className={styles.carouselSlider}>
+                        <Card className={styles.carouselText} title="Zixta Logistics Services" desc="YOUR LOGISTICS PARTNER – DELIVERY ON TIME" />
+                        <Image
+                            src={Foto1Image}
+                            alt="foto-1"
+                            layout="responsive"
+                            width="100%"
+                            height="45%"
+                        />
+                    </Box>
+                    <Box className={styles.carouselSlider}>
+                        <Card className={styles.carouselText} title="Zixta Logistics Services" desc="YOUR LOGISTICS PARTNER – DELIVERY ON TIME" />
+                        <Image
+                            src={Foto2Image}
+                            alt="foto-2"
+                            layout="responsive"
+                            width="100%"
+                            height="45%"
+                        />
+                    </Box>
+                    <Box className={styles.carouselSlider}>
+                        <Card className={styles.carouselText} title="Zixta Logistics Services" desc="YOUR LOGISTICS PARTNER – DELIVERY ON TIME" />
+                        <Image
+                            src={Foto3Image}
+                            alt="foto-3"
+                            layout="responsive"
+                            width="100%"
+                            height="45%"
+                        />
+                    </Box>
+                </Slider>
+            </Box>
         </Box>
     )
 }

@@ -21,14 +21,14 @@
 
 .carouselWrapper {
 	width: 100%;
-	max-height: 15rem;
+	max-height: 12.5em;
 	overflow: hidden;
 }
 
 .carouselSlider {
 	position: relative;
 	width: 100%;
-	height: fit-content;
+	height: 20em;
 }
 
 .carouselText {
@@ -39,6 +39,27 @@
 	height: 30%;
 	overflow-y: scroll;
 	z-index: 999;
+}
+
+.companyCarousel,
+.companyReason,
+.companyPartner,
+.companyHistory {
+	width: 100%;
+	position: relative;
+}
+
+.companyHistory {
+	padding-bottom: 1em;
+}
+
+.companyHistoryClip {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--gray-footer);
+	clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .companyReasonContainer {
@@ -88,19 +109,27 @@
 }
 
 @media screen and (min-width: 768px) {
+	.companyHistory,
+	.companyPartner,
+	.companyCarousel,
+	.companyReason {
+		width: 90%;
+		margin: auto;
+	}
+
 	.container {
 		padding: 0;
 	}
 
 	.carouselWrapper {
-		max-height: 30rem;
+		max-height: 25em;
 	}
 
 	.carouselText {
 		top: 55%;
 		right: 47.5%;
 		width: 50%;
-		height: 15%;
+		height: 22.5%;
 		overflow: unset;
 	}
 
@@ -115,15 +144,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.carouselWrapper {
-		max-height: 25rem;
+	.companyHistory,
+	.companyPartner,
+	.companyCarousel,
+	.companyReason {
+		width: 75%;
+		margin: auto;
 	}
 
 	.carouselText {
-		top: 37.5%;
-		right: 60%;
-		width: 35%;
-		height: 17.5%;
+		top: 65%;
+		right: 47.5%;
+		width: 50%;
+		height: 22.5%;
 		overflow: unset;
 	}
 
@@ -139,20 +172,20 @@
 
 @media screen and (min-width: 1200px) {
 	.carouselText {
-		top: 32.5%;
+		top: 75%;
 		right: 60%;
 		width: 35%;
-		height: 15%;
+		height: 22.5%;
 		overflow: unset;
 	}
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
 	.carouselText {
-		top: 30%;
-		right: 60%;
-		width: 35%;
-		height: 10%;
+		top: 75%;
+		right: 47.5%;
+		width: 50%;
+		height: 22.5%;
 		overflow: unset;
 	}
-}
+} */
