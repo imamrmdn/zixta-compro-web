@@ -21,7 +21,7 @@ export default function Careers() {
 
     return (
         <Box className={styles.ourCareer}>
-            <Box id="career" style={{ height: '9.5em' }} />
+            <Box id="career" style={{ height: '11em' }} />
             <Box ref={companyCareersRef} className={isCompanyCareersVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.career"]}</Heading>
                 <Text mt={4} ml={2}>Apply Now!</Text>

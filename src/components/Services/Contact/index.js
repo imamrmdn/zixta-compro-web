@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, Suspense } from "react"
 import dynamic from "next/dynamic";
 import { Box, Text, Heading } from "@chakra-ui/react"
 import { useIntl } from 'react-intl'
@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl'
 
 import styles from 'src/styles/Contact.module.css'
 
-const MapWithNoSSR = dynamic(() => import('./Map'), { ssr: false });
+const MapWithNoSSR = dynamic(() => import('./Map'), { ssr: false, suspense: true });
 
 export default function Contact() {
     const [isCompanyContactVisible, setisCompanyContactVisible] = useState(false)
@@ -26,19 +26,24 @@ export default function Contact() {
 
     return (
         <Box className={styles.ourContact}>
-            <Box id="contact" style={{ height: '9.5em' }} />
+            <Box id="contact" style={{ height: '11em' }} />
             <Box ref={companyContactRef} className={isCompanyContactVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.contact"]}</Heading>
                 <Box className={styles.contactWrapper}>
                     <Box p={5} mt="4" shadow='sm' className={styles.contactCardOffice}>
                         <Heading fontSize='xl' textAlign="center" height="6">Head Office</Heading>
-                        <Text mt="2" textAlign="center">Jl. Enggano No.66, RT.4/RW.16, Tj. Priok, Kec. Tj. Priok, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14310</Text>
+                        <Text mt="2" textAlign="center">Gedung Tjokro Bersaudara lt.2, Jl. Enggano No. 66 RT.013/RW.06, Tanjung Priok, Jakarta Utara, DKI Jakarta, 14310</Text>
 
                         <Heading mt="6" fontSize='xl' textAlign="center" height="6">Branch Office</Heading>
-                        <Text mt="2" textAlign="center">Jl. Pasir Putih Raya Blok E-5d No. 13 (Ruko Kobexindo), Kelurahan Ancol, Kecamatan Pademangan, Kota Jakarta Utara, DKI Jakarta, 14430</Text>
+                        <Text mt="2" textAlign="center">Jl. Pasir Putih Raya Blok E- 5D No. 13 (Ruko Kobexindo), Ancol, Pademangan, Jakarta Utara, DKI Jakarta, 14430</Text>
+
+                        <Heading mt="6" fontSize='xl' textAlign="center" height="6">Pool</Heading>
+                        <Text mt="2" textAlign="center">Garasi Rohan, Jalan Sarang Bangau, Marunda, Jakarta Utara</Text>
                     </Box>
 
-                    <MapWithNoSSR />
+                    <Suspense fallback="Loading...">
+                        <MapWithNoSSR />
+                    </Suspense>
                     {/* <MapComponent /> */}
                 </Box>
             </Box >

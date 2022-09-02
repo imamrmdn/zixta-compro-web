@@ -6,7 +6,7 @@ import {
 // import { MailOutlined, UserOutlined, PhoneOutlined } from '@ant-design/icons'
 // import { CheckIcon } from '@chakra-ui/icons'
 import Leaflet from 'leaflet';
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 // import { Icon } from "leaflet";
 
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -16,27 +16,27 @@ import styles from 'src/styles/Contact.module.css'
 const f = {
     "features": [
         {
-            "type": "Feature",
-            "properties": {
-                "PARK_ID": 960,
-                "NAME": "Bearbrook Skateboard Park",
-                "DESCRIPTIO": "Flat asphalt surface, 5 components"
-            },
+            "id": 1,
+            "name": "Head Office",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-75.3372987731628, 45.383321536272049]
+                "coordinates": [-6.1103082, 106.8883753,]
             }
         },
         {
-            "type": "Feature",
-            "properties": {
-                "PARK_ID": 1219,
-                "NAME": "Bob MacQuarrie Skateboard Park (SK8 Extreme Park)",
-                "DESCRIPTIO": "Flat asphalt surface, 10 components, City run learn to skateboard programs, City run skateboard camps in summer"
-            },
+            "id": 2,
+            "name": "Branch Office",
             "geometry": {
                 "type": "Point",
-                "coordinates": [-75.546518086577947, 45.467134581917357]
+                "coordinates": [-6.1233949, 106.848022]
+            }
+        },
+        {
+            "id": 3,
+            "name": "Pool",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.1241484, 106.9540262]
             }
         }
     ]
@@ -49,7 +49,6 @@ export default function MapComponent() {
                 iconUrl: icon.src,
                 shadowUrl: iconShadow.src
             });
-
             Leaflet.Marker.prototype.options.icon = DefaultIcon;
         }
     }, [])
@@ -58,21 +57,27 @@ export default function MapComponent() {
         return (
             <Box p={5} mt="4" shadow='sm' className={styles.contactCardForm}>
                 <MapContainer center={[
-                    45.383321536272049,
-                    -75.3372987731628
-                ]} zoom={10} scrollWheelZoom style={{ height: "100%", width: "100%" }}>
+                    -6.1103082,
+                    106.8883753,
+                ]} zoom={12} scrollWheelZoom style={{ height: "100%", width: "100%" }}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {f.features.map(park => (
                         <Marker
-                            key={park.properties.PARK_ID}
+                            key={park.id}
                             position={[
+                                park.geometry.coordinates[0],
                                 park.geometry.coordinates[1],
-                                park.geometry.coordinates[0]
                             ]}
-                        />
+                        >
+                            <Popup offset={[12, 3]}>
+                                <Box as="p" textAlign="center">
+                                    {park.name}
+                                </Box>
+                            </Popup>
+                        </Marker>
                     ))}
                 </MapContainer>
             </Box>
