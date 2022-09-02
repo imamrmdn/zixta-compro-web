@@ -5,11 +5,12 @@ import Image from 'next/image'
 // import Chatra from '@chatra/chatra'
 import { Box, Button, Heading, IconButton, Menu, MenuList, MenuItem, MenuButton, useDisclosure, useBreakpointValue } from '@chakra-ui/react'
 import {
-    HamburgerIcon, PhoneIcon,
+    HamburgerIcon,
+    PhoneIcon,
     // TimeIcon, 
     EmailIcon
 } from '@chakra-ui/icons'
-import { SolutionOutlined, YoutubeOutlined } from '@ant-design/icons'
+import { SolutionOutlined, InstagramOutlined, TwitterOutlined, FacebookOutlined } from '@ant-design/icons'
 import { useIntl } from 'react-intl'
 
 import SmallNavbar from "./SmallNavbar"
@@ -87,7 +88,7 @@ export default function Layout({ children }) {
     }
 
     const goToEmail = () => {
-        push('mailto:email@yahoo.com')
+        push('mailto:exportimport@zixtalogisticsjkt.com')
     }
 
     if (!hasMounted) return null
@@ -189,26 +190,40 @@ export default function Layout({ children }) {
                             PT Zixta Logistics Services
                         </Heading>
                         <Box className={styles.footerAddress}>
-                            Jl. Enggano No.66, RT.4/RW.16, Tj. Priok, Kec. Tj. Priok, Kota Jkt Utara, Daerah Khusus Ibukota Jakarta 14310
+                            Gedung Tjokro Bersaudara lt.2, Jl. Enggano No. 66 RT.013/RW.06, Tanjung Priok, Jakarta Utara, 14310
                         </Box>
                     </Box>
                     <Box className={styles.footerHelpWrapper}>
                         <Box className={styles.footerInfo}>
-                            <Link className={styles.footerInfoItem} href="/services#career">
-                                <Button size={buttonFooterSize} leftIcon={<SolutionOutlined />} variant='outline' borderColor="#d52a1d">
-                                    {messages["navbar.career"]}
-                                </Button>
-                            </Link>
-                            {/* <Link className={styles.footerInfoItem} href="/services#contact"> */}
-                            <a target="_blank" href="https://wa.me/085889167838" rel="noopener noreferrer">
-                                <Button size={buttonFooterSize} leftIcon={<PhoneIcon />} variant='outline' borderColor="#d52a1d">
+                            <Box className={styles.footerInfoItem}>
+                                <Link href="/services#career">
+                                    <Button w="100%" className={styles.buttonInfoItem} size={buttonFooterSize} leftIcon={<SolutionOutlined />} variant='outline'>
+                                        {messages["navbar.career"]}
+                                    </Button>
+                                </Link>
+                            </Box>
+
+                            <a className={styles.footerInfoItem} target="_blank" href="https://wa.me/087789805500" rel="noopener noreferrer">
+                                <Button w="100%" className={styles.buttonInfoItem} size={buttonFooterSize} leftIcon={<PhoneIcon />} variant='outline'>
                                     {messages["navbar.contact"]}
                                 </Button>
                             </a>
-                            {/* </Link> */}
-                            <a target="_blank" href="https://www.youtube.com/watch?v=hetoEq_vrMc&ab_channel=SoundsFromTheCorner" rel="noopener noreferrer">
-                                <Button size={buttonFooterSize} leftIcon={<YoutubeOutlined />} variant='outline' borderColor="#d52a1d">
-                                    YouTube
+
+                            <a className={styles.footerInfoItem} target="_blank" href="https://www.instagram.com/p/CJvflT7AvRa/?igshid=MDJmNzVkMjY=" rel="noopener noreferrer">
+                                <Button w="100%" className={styles.buttonInfoItem} size={buttonFooterSize} leftIcon={<InstagramOutlined />} variant='outline'>
+                                    Instagram
+                                </Button>
+                            </a>
+
+                            <a className={styles.footerInfoItem} target="_blank" href="https://www.facebook.com/profile.php?id=1463589880558869&_rdr" rel="noopener noreferrer">
+                                <Button w="100%" className={styles.buttonInfoItem} size={buttonFooterSize} leftIcon={<FacebookOutlined />} variant='outline'>
+                                    Facebook
+                                </Button>
+                            </a>
+
+                            <a className={styles.footerInfoItem} target="_blank" href="https://twitter.com/zixtalogistics" rel="noopener noreferrer">
+                                <Button w="100%" className={styles.buttonInfoItem} size={buttonFooterSize} leftIcon={<TwitterOutlined />} variant='outline'>
+                                    Twitter
                                 </Button>
                             </a>
                         </Box>
