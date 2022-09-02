@@ -19,6 +19,15 @@
 	position: relative;
 }
 
+.ourStoryClip {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: var(--gray-footer);
+	clip-path: polygon(0 0, 100% 74%, 100% 100%, 0% 100%);
+	-webkit-clip-path: polygon(0 0, 100% 74%, 100% 100%, 0% 100%);
+}
+
 .profileSubTitle {
 	text-align: center;
 	font-weight: 600;

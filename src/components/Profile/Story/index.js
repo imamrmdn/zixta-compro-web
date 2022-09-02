@@ -23,17 +23,20 @@ export default function StoryComponent() {
     }, [])
 
     return (
-        <Box className={styles.ourStory}>
-            <Box mt="8" ref={companyStoryRef} className={isCompanyStoryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-                <Heading as='h2' size='lg' textAlign='center'>
-                    {messages["company.story"]}
-                </Heading>
-                <Box className={styles.profileSubTitle}>
-                    {messages["company.story.title"]}
-                </Box>
-                <Box className={styles.ourStoryContainer}>
-                    <CeoStory />
-                    <OurStory />
+        <Box w="100%" h="100%" position="relative">
+            <Box className={styles.ourStoryClip} />
+            <Box className={styles.ourStory}>
+                <Box mt="8" ref={companyStoryRef} className={isCompanyStoryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+                    <Heading as='h2' size='lg' textAlign='center'>
+                        {messages["company.story"]}
+                    </Heading>
+                    <Box className={styles.profileSubTitle}>
+                        {messages["company.story.title"]}
+                    </Box>
+                    <Box className={styles.ourStoryContainer}>
+                        <CeoStory />
+                        <OurStory />
+                    </Box>
                 </Box>
             </Box>
         </Box>
