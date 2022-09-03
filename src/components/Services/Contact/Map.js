@@ -1,17 +1,14 @@
 import { useEffect } from "react"
-import {
-    Box,
-    // Button, Text, Stack, Heading, FormControl, Input, InputGroup, InputLeftElement, InputRightElement, Textarea 
-} from "@chakra-ui/react"
-// import { MailOutlined, UserOutlined, PhoneOutlined } from '@ant-design/icons'
-// import { CheckIcon } from '@chakra-ui/icons'
+import { Box } from "@chakra-ui/react"
 import Leaflet from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-// import { Icon } from "leaflet";
+import * as ReactLeaflet from 'react-leaflet';
 
+import iconRetinaUrl from 'leaflet/dist/images/marker-icon-2x.png';
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import styles from 'src/styles/Contact.module.css'
+
+import 'leaflet/dist/leaflet.css';
 
 const f = {
     "features": [
@@ -42,45 +39,47 @@ const f = {
     ]
 }
 
+const { MapContainer, TileLayer, Marker, Popup } = ReactLeaflet;
+
 export default function MapComponent() {
     useEffect(() => {
-        if (typeof window !== undefined) {
-            let DefaultIcon = Leaflet.icon({
+        (async function init() {
+            delete Leaflet.Icon.Default.prototype._getIconUrl;
+
+            Leaflet.Icon.Default.mergeOptions({
+                iconRetinaUrl: iconRetinaUrl.src,
                 iconUrl: icon.src,
                 shadowUrl: iconShadow.src
             });
-            Leaflet.Marker.prototype.options.icon = DefaultIcon;
-        }
-    }, [])
+        })();
+    }, []);
 
-    if (typeof window !== undefined) {
-        return (
-            <Box p={5} mt="4" shadow='sm' className={styles.contactCardForm}>
-                <MapContainer center={[
-                    -6.1103082,
-                    106.8883753,
-                ]} zoom={12} scrollWheelZoom style={{ height: "100%", width: "100%" }}>
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    {f.features.map(park => (
-                        <Marker
-                            key={park.id}
-                            position={[
-                                park.geometry.coordinates[0],
-                                park.geometry.coordinates[1],
-                            ]}
-                        >
-                            <Popup offset={[12, 3]}>
-                                <Box as="p" textAlign="center">
-                                    {park.name}
-                                </Box>
-                            </Popup>
-                        </Marker>
-                    ))}
-                </MapContainer>
-            </Box>
-        )
-    }
+    return (
+        <Box p={5} mt="4" shadow='sm' className={styles.contactCardForm}>
+            <MapContainer center={[
+                -6.1103082,
+                106.8883753,
+            ]} zoom={12} scrollWheelZoom style={{ height: "100%", width: "100%" }}>
+                <TileLayer
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                {f.features.map(park => (
+                    <Marker
+                        key={park.id}
+                        position={[
+                            park.geometry.coordinates[0],
+                            park.geometry.coordinates[1],
+                        ]}
+                    >
+                        <Popup>
+                            <Box as="p" textAlign="center">
+                                {park.name}
+                            </Box>
+                        </Popup>
+                    </Marker>
+                ))}
+            </MapContainer>
+        </Box>
+    )
 }

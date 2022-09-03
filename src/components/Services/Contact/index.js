@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, Suspense } from "react"
+import { useEffect, useRef, useState } from "react"
 import dynamic from "next/dynamic";
 import { Box, Text, Heading } from "@chakra-ui/react"
 import { useIntl } from 'react-intl'
@@ -7,7 +7,7 @@ import { useIntl } from 'react-intl'
 
 import styles from 'src/styles/Contact.module.css'
 
-const MapWithNoSSR = dynamic(() => import('./Map'), { ssr: false, suspense: true });
+const MapWithNoSSR = dynamic(() => import('./Map'), { ssr: false });
 
 export default function Contact() {
     const [isCompanyContactVisible, setisCompanyContactVisible] = useState(false)
@@ -41,9 +41,7 @@ export default function Contact() {
                         <Text mt="2" textAlign="center">Garasi Rohan, Jalan Sarang Bangau, Marunda, Jakarta Utara</Text>
                     </Box>
 
-                    <Suspense fallback="Loading...">
-                        <MapWithNoSSR />
-                    </Suspense>
+                    <MapWithNoSSR />
                     {/* <MapComponent /> */}
                 </Box>
             </Box >
