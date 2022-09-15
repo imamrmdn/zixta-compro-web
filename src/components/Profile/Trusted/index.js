@@ -23,22 +23,25 @@ export default function TrustedComponent() {
     }, [])
 
     return (
-        <Box className={styles.trustedBy}>
-            <Box mt="16" ref={companyTrustedRef} className={isCompanyTrustedVisible && `animate__animated  animate__slideInLeft animate__slow`}>
-                <Heading as='h2' size='lg' textAlign="center">Trusted By</Heading>
-                <Box className={styles.profileSubTitle}>
-                    {messages["company.trusted.title"]}
+        <Box w="100%" h="100%" position="relative">
+            <Box className={styles.trustedByClip} />
+            <Box className={styles.trustedBy}>
+                <Box mt="16" ref={companyTrustedRef} className={isCompanyTrustedVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+                    <Heading as='h2' size='lg' textAlign="center">Trusted By</Heading>
+                    <Box className={styles.profileSubTitle}>
+                        {messages["company.trusted.title"]}
+                    </Box>
+
+                    <Heading as='h2' mt="16" size='md' textAlign='center'>
+                        {messages["company.customer"]}
+                    </Heading>
+                    <OurCustomer />
+
+                    <Heading as='h2' mt="16" size='md' textAlign='center'>
+                        {messages["company.vendor"]}
+                    </Heading>
+                    <OurVendor />
                 </Box>
-
-                <Heading as='h2' mt="16" size='md' textAlign='center'>
-                    {messages["company.customer"]}
-                </Heading>
-                <OurCustomer />
-
-                <Heading as='h2' mt="16" size='md' textAlign='center'>
-                    {messages["company.vendor"]}
-                </Heading>
-                <OurVendor />
             </Box>
         </Box>
     )

@@ -24,7 +24,7 @@ export default function StoryComponent() {
 
     return (
         <Box w="100%" h="100%" position="relative">
-            <Box className={styles.ourStoryClip} />
+            {/* <Box className={styles.ourStoryClip} /> */}
             <Box className={styles.ourStory}>
                 <Box mt="8" ref={companyStoryRef} className={isCompanyStoryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
                     <Heading as='h2' size='lg' textAlign='center'>

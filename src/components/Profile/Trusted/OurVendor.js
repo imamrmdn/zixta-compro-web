@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Box } from "@chakra-ui/react"
 
 import juggernautImage from 'assets/jugger.jpg'
+import interconImage from 'assets/intercon-logo.png'
 
 import styles from 'src/styles/Profile.module.css'
 
@@ -11,7 +12,7 @@ export default function OurVendor() {
             <Box p={5} className={styles.companyCustomerWrapper}>
                 <Box className={styles.companyCustomerItem}>
                     <Image
-                        src={juggernautImage}
+                        src={interconImage}
                         alt="jugger image"
                         layout="fixed"
                         width={125}
