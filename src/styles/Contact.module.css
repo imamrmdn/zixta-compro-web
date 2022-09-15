@@ -48,7 +48,7 @@
 
 	.contactCardOffice {
 		width: 40%;
-		margin-left: 0.75rem;
+		/* margin-left: 0.75rem; */
 		border-width: 1px;
 		border-radius: 5px;
 		height: 26.5em;
@@ -56,7 +56,7 @@
 
 	.contactCardForm {
 		width: 55%;
-		margin-right: 0.75rem;
+		/* margin-right: 0.75rem; */
 		border-width: 1px;
 		border-radius: 5px;
 		height: 26.5em;
