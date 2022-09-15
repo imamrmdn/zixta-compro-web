@@ -1,13 +1,13 @@
 .container {
 	width: 100%;
-	height: 9em;
+	/* height: 6em; */
 	/* padding: 0px 0.5rem; */
 }
 
 .scrollContainer {
 	width: 100%;
-	height: 9em;
-	padding: 0px 0.5rem;
+	/* height: 6em; */
+	padding: 0px;
 	position: sticky;
 	top: 0%;
 	z-index: 9;
@@ -54,7 +54,7 @@
 }
 
 .companyNameWrapper {
-	width: 70%;
+	width: 50%;
 	/* height: 10%; */
 	display: flex;
 	align-items: center;
@@ -62,7 +62,7 @@
 }
 
 .companyNameLogo {
-	width: 45%;
+	width: 60%;
 	/* margin-top: 0.5rem; */
 	margin-left: 0.5rem;
 }
@@ -72,29 +72,19 @@
 }
 
 .languageContainer {
-	width: 20%;
+	width: 50%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: baseline;
 }
 
 .companyDescriptionLargeContainer {
-	display: none;
-}
-
-.companyDescriptionSmallContainer {
 	display: flex;
-	margin-top: 0.5rem;
-}
-
-.companyDescriptionLargeContainer,
-.companyDescriptionSmallContainer {
 	justify-content: flex-end;
-	width: 100%;
+	width: 50%;
 }
 
-.companyDescriptionLargeWrapper,
-.companyDescriptionSmallWrapper {
+.companyDescriptionLargeWrapper {
 	display: flex;
 	align-items: center;
 	width: 100%;
@@ -105,10 +95,6 @@
 	justify-content: space-between;
 }
 
-.companyDescriptionSmallWrapper {
-	justify-content: space-evenly;
-}
-
 .companyDescriptionLargeItem {
 	width: 50%;
 	text-align: center;
@@ -116,15 +102,8 @@
 	color: var(--primary-red);
 }
 
-.companyDescriptionSmallItem {
-	width: 33%;
-	text-align: center;
-	padding: 10px;
-	color: var(--primary-red);
-}
-
 .footer {
-	background-color: var(--gray-footer);
+	background-color: var(--background-footer-color);
 	width: 100%;
 	height: auto;
 	padding-top: 1.5rem;
@@ -144,7 +123,7 @@
 .footerDescriptionWrapper {
 	width: 100%;
 	height: 100%;
-	padding-left: 0.25em;
+	padding: 0px 0.75em;
 	margin-bottom: 0.5em;
 }
 
@@ -157,7 +136,7 @@
 	max-width: 250px;
 	font-size: 14px;
 	line-height: 19px;
-	color: var(--gray);
+	color: white;
 }
 
 .footerHelpWrapper {
@@ -181,14 +160,19 @@
 }
 
 .buttonInfoItem {
-	color: var(--primary-blue) !important;
-	border-color: var(--primary-blue) !important;
-	background: transparent;
+	color: white !important;
+	border-color: white !important;
+}
+
+.buttonInfoItem:hover {
+	color: var(--background-footer-color) !important;
+	border-color: var(--background-footer-color) !important;
 }
 
 .footerCopyright {
 	width: 100%;
 	border-top: 1px solid #868a92;
+	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -203,21 +187,22 @@
 .smallNavbarContainer {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	/* justify-content: center; */
+	/* align-items: center; */
 	width: 100%;
-	height: 100%;
-	background: var(--primary-blue);
-	opacity: 0.75;
+	height: auto;
+	background: var(--gray-footer);
+	padding-bottom: 0.5em;
 
-	position: fixed;
-	top: 0;
 	z-index: 3;
+	position: fixed;
+	top: 13%;
 	color: white;
 }
 
 .hamburgerIcon {
 	display: block;
+	margin: 0px 0.5em;
 }
 
 .closeIcon {
@@ -232,7 +217,6 @@
 	top: 0;
 }
 
-.companyDescriptionSmallItem,
 .activeLink,
 .activeSmallLink,
 .nonActiveLink,
@@ -247,32 +231,26 @@
 }
 
 .nonActiveLink {
-	color: black;
+	color: var(--primary-blue);
 }
 
 .activeLink {
-	color: var(--primary-blue);
+	color: var(--gray);
 	font-weight: bold;
 }
 
 .nonActiveSmallLink {
-	color: black;
+	color: var(--primary-blue);
 }
 
 .activeSmallLink {
-	color: white;
+	color: var(--gray);
 	font-weight: bold;
 }
 
-/* @media screen and (max-width: 767px) {
-  .companyDescriptionSmallWrapper {
-    width: 75%;
-  }
-} */
-
 @media screen and (min-width: 425px) {
 	.footerHelpWrapper {
-		height: 7.5em;
+		height: 9em;
 	}
 }
 
@@ -288,6 +266,17 @@
 
 	.container {
 		padding: 0;
+		height: 6em;
+	}
+
+	.scrollContainer {
+		padding: 0px 0.5rem;
+		height: 6em;
+	}
+
+	.companyNameWrapper {
+		width: 80%;
+		margin-top: 1.25em;
 	}
 
 	.companyNameLogo {
@@ -300,12 +289,12 @@
 		display: block;
 	}
 
-	.companyDescriptionLargeContainer {
-		display: flex;
+	.languageContainer {
+		width: 20%;
 	}
 
-	.companyDescriptionSmallContainer {
-		display: none;
+	.companyDescriptionLargeContainer {
+		width: 100%;
 	}
 
 	.scrollContainer {
@@ -316,7 +305,8 @@
 
 	.footerDescriptionWrapper {
 		width: 30%;
-		height: 20em;
+		height: 22.5em;
+		padding-left: 0px;
 	}
 
 	.footerHelpWrapper {
@@ -354,7 +344,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		width: 100%;
+		width: 70%;
 		padding: 10px;
 	}
 }
@@ -368,14 +358,10 @@
 		width: 75%;
 		margin: auto;
 	}
-
-	.companyDescriptionSmallWrapper {
-		width: 50%;
-	}
 }
 
-@media screen and (min-width: 1400px) {
-	.companyDescriptionSmallWrapper {
-		width: 40%;
+/* @media screen and (min-width: 1280px) {
+	.footerDescriptionWrapper {
+		height: 15em;
 	}
-}
+} */

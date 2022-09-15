@@ -22,21 +22,21 @@ export default function SmallNavbar({ onClose }) {
     }, [])
 
     useEffect(() => {
-        if (width === 768) {
+        if (width >= 768) {
             onClose()
         }
     }, [onClose, width])
 
     return (
-        <Box className={styles.smallNavbarContainer}>
-            <Box className={`animate__animated animate__lightSpeedInLeft ${styles.closeIcon}`}>
+        <Box className={`animate__animated animate__fadeIn ${styles.smallNavbarContainer}`}>
+            {/* <Box className={`animate__animated animate__lightSpeedInLeft ${styles.closeIcon}`}>
                 <IconButton
                     aria-label='Close-icon'
                     variant="ghost"
                     onClick={onClose}
                     icon={<CloseIcon w={6} h={6} />}
                 />
-            </Box>
+            </Box> */}
             <LinkItem href="/" name={messages["navbar.home"]} onClose={onClose} />
             <LinkItem href="/profile" name={messages["navbar.profile"]} onClose={onClose} />
             <LinkItem href="/services" name={messages["navbar.services"]} onClose={onClose} />
@@ -49,7 +49,7 @@ export default function SmallNavbar({ onClose }) {
 const LinkItem = ({ href, name, onClose }) => {
     const { asPath } = useRouter()
     return (
-        <Box style={{ margin: '1em 0px' }}>
+        <Box style={{ margin: '1em 0px 0px 2em', }}>
             <Link href={href}>
                 <a className={asPath === href ? styles.activeSmallLink : styles.nonActiveSmallLink} onClick={onClose}>
                     {name}

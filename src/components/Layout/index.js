@@ -22,8 +22,8 @@ import logoFooterImage from 'assets/logo-footer.png'
 import styles from 'src/styles/Layout.module.css'
 
 export default function Layout({ children }) {
-    const { locale, asPath, push } = useRouter()
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { locale, asPath, push, pathname } = useRouter()
+    const { isOpen, onOpen, onClose, onToggle } = useDisclosure()
     const { messages } = useIntl()
 
     const buttonFooterSize = useBreakpointValue(['sm', 'md'])
@@ -55,6 +55,8 @@ export default function Layout({ children }) {
     const menuLocalePath = locale === "id-ID" ? "en-US" : "id-ID"
     const menuLocaleName = locale === "id-ID" ? "ID" : "EN"
     const menuItemLocaleName = locale === "id-ID" ? "EN" : "ID"
+
+    const isPathContact = pathname === '/contact'
 
     useEffect(() => {
         setHasMounted(true)
@@ -93,10 +95,6 @@ export default function Layout({ children }) {
 
     if (!hasMounted) return null
 
-    if (isOpen) {
-        return <SmallNavbar onClose={onClose} />
-    }
-
     return (
         <>
             <header className={isScroll ? styles.scrollContainer : styles.container}>
@@ -114,17 +112,28 @@ export default function Layout({ children }) {
                                 // height='100%'
                                 />
                             </Box>
+                            <Box className={styles.navbarContainer}>
+                                {navbarList.map(item => (
+                                    <Link href={item.path} key={item.id}>
+                                        {asPath &&
+                                            <a className={asPath === item.path ? styles.activeLink : styles.nonActiveLink}>
+                                                {item.id}
+                                            </a>
+                                        }
+                                    </Link>
+                                ))}
+                            </Box>
                             {/* <Heading as='h2' size='md' marginLeft='0.5em' className={styles.companyNameTitle}>
                             Zixta Logistics Services
                         </Heading> */}
                         </Box>
                         <Box className={styles.languageContainer}>
                             <Box className={styles.companyDescriptionLargeContainer}>
-                                <Box className={styles.companyDescriptionLargeWrapper}>
-                                    <Box className={styles.companyDescriptionLargeItem}><PhoneIcon onClick={goToContact} boxSize={5} cursor="pointer" /></Box>
-                                    {/* <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box> */}
-                                    <Box className={styles.companyDescriptionLargeItem}><EmailIcon onClick={goToEmail} boxSize={5} cursor="pointer" /></Box>
-                                </Box>
+                                {/* <Box className={styles.companyDescriptionLargeWrapper}> */}
+                                <Box className={styles.companyDescriptionLargeItem}><PhoneIcon onClick={goToContact} boxSize={5} cursor="pointer" /></Box>
+                                {/* <Box className={styles.companyDescriptionLargeItem}><TimeIcon boxSize={5} /></Box> */}
+                                <Box className={styles.companyDescriptionLargeItem}><EmailIcon onClick={goToEmail} boxSize={5} cursor="pointer" /></Box>
+                                {/* </Box> */}
                             </Box>
                             <Box as={Menu}>
                                 <MenuButton as={Button} >
@@ -142,38 +151,24 @@ export default function Layout({ children }) {
                                 <IconButton
                                     aria-label='Hamburger-icon'
                                     variant="ghost"
-                                    onClick={onOpen}
+                                    onClick={onToggle}
                                     icon={<HamburgerIcon w={6} h={6} />}
                                 />
                             </Box>
                         </Box>
                     </Box>
-                    <Box className={styles.companyDescriptionSmallContainer}>
-                        <Box className={styles.companyDescriptionSmallWrapper}>
-                            <Box className={styles.companyDescriptionSmallItem} onClick={goToContact}>Contact Us</Box>
-                            {/* <Box className={styles.companyDescriptionSmallItem}>Working Hours</Box> */}
-                            <Box className={styles.companyDescriptionSmallItem} onClick={goToEmail}>Email Us</Box>
-                        </Box>
-                    </Box>
-                    <Box mt="6" className={styles.navbarContainer}>
-                        {navbarList.map(item => (
-                            <Link href={item.path} key={item.id}>
-                                {asPath &&
-                                    <a className={asPath === item.path ? styles.activeLink : styles.nonActiveLink}>
-                                        {item.id}
-                                    </a>
-                                }
-                            </Link>
-                        ))}
-                    </Box>
                 </Box>
+                {isOpen && <SmallNavbar onClose={onClose} />}
             </header>
-            <main className={styles.main}>
-                <Box className={styles.mainClip} />
-                <Box className={styles.mainWrapper}>
-                    {children}
-                </Box>
-            </main>
+            {
+                !isPathContact &&
+                <main className={styles.main}>
+                    <Box className={styles.mainClip} />
+                    <Box className={styles.mainWrapper}>
+                        {children}
+                    </Box>
+                </main>
+            }
             <footer className={styles.footer}>
                 <Box className={styles.footerWrapper}>
                     <Box className={styles.footerDescriptionWrapper}>
@@ -186,11 +181,14 @@ export default function Layout({ children }) {
                         // style={{ opacity: '0.75' }}
                         // className={styles.footerImage}
                         />
-                        <Heading size="md" style={{ margin: '0.25em 0px' }}>
+                        <Heading size="md" style={{ color: 'white', margin: '0.25em 0px' }}>
                             PT Zixta Logistics Services
                         </Heading>
                         <Box className={styles.footerAddress}>
                             Gedung Tjokro Bersaudara lt.2, Jl. Enggano No. 66 RT.013/RW.06, Tanjung Priok, Jakarta Utara, 14310
+                        </Box>
+                        <Box mt="2" className={styles.footerAddress}>
+                            {messages["company.operation.day"]}, 09.00 - 17.00
                         </Box>
                     </Box>
                     <Box className={styles.footerHelpWrapper}>
