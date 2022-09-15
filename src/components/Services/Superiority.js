@@ -34,6 +34,7 @@ export default function Superiority() {
                     <Box className={styles.companySuperiorityContainer}>
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
+                                headingClass={styles.companySuperiorityItemCardHeading}
                                 title={messages["company.superiority.title.1"]}
                                 desc={messages["company.superiority.description.1"]}
                             />
@@ -44,6 +45,7 @@ export default function Superiority() {
 
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
+                                headingClass={styles.companySuperiorityItemCardHeading}
                                 title={messages["company.superiority.title.2"]}
                                 desc={messages["company.superiority.description.2"]}
                             />
@@ -54,6 +56,7 @@ export default function Superiority() {
 
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
+                                headingClass={styles.companySuperiorityItemCardHeading}
                                 title={messages["company.superiority.title.3"]}
                                 desc={messages["company.superiority.description.3"]}
                             />
@@ -64,6 +67,7 @@ export default function Superiority() {
 
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
+                                headingClass={styles.companySuperiorityItemCardHeading}
                                 title={messages["company.superiority.title.4"]}
                                 desc={messages["company.superiority.description.4"]}
                             />
@@ -85,10 +89,10 @@ export default function Superiority() {
 }
 
 
-function Card({ title, desc, ...rest }) {
+function Card({ title, desc, headingClass, ...rest }) {
     return (
         <Box p={4} w="100%" shadow='md' borderWidth='1px' borderRadius='10px' {...rest}>
-            <Heading fontSize='xl' textAlign="center" height="12">{title}</Heading>
+            <Heading fontSize='xl' className={headingClass} textAlign="center" height="12">{title}</Heading>
             <Text mt={4} textAlign="center">{desc}</Text>
         </Box>
     )

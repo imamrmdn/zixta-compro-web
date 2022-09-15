@@ -31,6 +31,11 @@
 	display: flex;
 	width: 100%;
 	min-height: 275px;
+	margin-bottom: 1.5em;
+}
+
+h2.companySuperiorityItemCardHeading:first-letter {
+	color: var(--primary-red) !important;
 }
 
 .ourService,
@@ -41,12 +46,22 @@
 }
 
 .ourSuperiorityClip {
+	background-image: url("/assets/Desktop-1.svg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.ourServiceClip {
+	background-image: url("/assets/Desktop-3.svg");
+	background-position: 30% 15%;
+	background-repeat: no-repeat;
+}
+
+.ourSuperiorityClip,
+.ourServiceClip {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: var(--gray-footer);
-	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-	-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 .displayArrowForwardIcon,
@@ -73,6 +88,16 @@
 	.companySuperiorityItemWrapper {
 		width: 45%;
 		margin-top: 1.5em;
+	}
+
+	.ourSuperiorityClip {
+		background-position: 100% 0%;
+		background-repeat: no-repeat;
+	}
+
+	.ourServiceClip {
+		background-position: 17.5% 25%;
+		background-repeat: no-repeat;
 	}
 
 	.displayArrowForwardIcon {
@@ -109,5 +134,15 @@
 	.companySuperiorityItemWrapper {
 		margin-top: 3em;
 		width: 22.5%;
+	}
+
+	.ourSuperiorityClip {
+		background-position: 100% 33%;
+		background-repeat: no-repeat;
+	}
+
+	.ourServiceClip {
+		background-position: 0% 27.5%;
+		background-repeat: no-repeat;
 	}
 }

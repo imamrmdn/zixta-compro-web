@@ -26,7 +26,7 @@ export default function Contact() {
 
     return (
         <Box className={styles.ourContact}>
-            <Box id="contact" style={{ height: '11em' }} />
+            <Box id="contact" style={{ height: '7em' }} />
             <Box ref={companyContactRef} className={isCompanyContactVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.contact"]}</Heading>
                 <Box className={styles.contactWrapper}>
