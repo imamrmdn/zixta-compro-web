@@ -28,8 +28,8 @@ export default function History() {
     return (
         <Box w="100%" h="100%" position="relative">
             <Box className={styles.companyHistoryClip} />
-            <Box className={styles.companyHistory}>
-                <Box mt="10" padding="0px 0.5rem" ref={companyHistoryRef} className={isCompanyHistoryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+            <Box mt="10" padding="0px 0.5rem" ref={companyHistoryRef} className={isCompanyHistoryVisible && `animate__animated  animate__slideInLeft animate__slow`}>
+                <Box className={styles.companyHistory}>
                     {/* <Box className={styles.companyHistoryClip} /> */}
                     <Box textAlign="center" position="relative">
                         <Image

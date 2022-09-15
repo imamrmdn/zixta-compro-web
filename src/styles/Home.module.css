@@ -53,13 +53,18 @@
 	padding-bottom: 1em;
 }
 
+.companyReasonClip,
 .companyHistoryClip {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: var(--gray-footer);
-	clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
-	-webkit-clip-path: polygon(0 44%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.companyHistoryClip {
+	background-image: url("/assets/Desktop-4.svg");
+	background-size: cover;
+	background-position: 50% 3%;
+	background-repeat: no-repeat;
 }
 
 .companyReasonContainer {
@@ -85,6 +90,12 @@
 
 .companyReasonItemSubTitle {
 	font-size: 0.85rem;
+}
+
+.companyReasonClip {
+	background-image: url("/assets/Desktop-3.svg");
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
 }
 
 .companyPartnerContainer {
@@ -141,6 +152,14 @@
 	.companyPartnerItem {
 		width: 33%;
 	}
+
+	.companyHistoryClip {
+		background-position: center 100px;
+	}
+
+	.companyReasonClip {
+		background-position: 20% 5%;
+	}
 }
 
 @media screen and (min-width: 1024px) {
@@ -168,6 +187,14 @@
 	.companyReasonItemSubTitle {
 		max-width: 350px;
 	}
+
+	.companyHistoryClip {
+		background-position: 25% 50%;
+	}
+
+	.companyReasonClip {
+		background-position: 20% 5%;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -180,12 +207,12 @@
 	}
 }
 
-/* @media screen and (min-width: 1440px) {
-	.carouselText {
-		top: 75%;
-		right: 47.5%;
-		width: 50%;
-		height: 22.5%;
-		overflow: unset;
+@media screen and (min-width: 1440px) {
+	.companyHistoryClip {
+		background-position: 20%;
 	}
-} */
+
+	.companyReasonClip {
+		background-position: -5px 0%;
+	}
+}
