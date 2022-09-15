@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react"
 
 import HomeCarousel from "./Carousel"
 import WhyReason from './WhyReason'
-import Partner from "./Partner"
+// import Partner from "./Partner"
 import History from "./History"
 
 // import juggernautImage from 'assets/jugger.jpg'
@@ -15,7 +15,7 @@ export default function HomeComponent() {
             <HomeCarousel />
             <History />
             <WhyReason />
-            <Partner />
+            {/* <Partner /> */}
         </Box>
     )
 }

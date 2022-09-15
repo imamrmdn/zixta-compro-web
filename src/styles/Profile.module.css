@@ -63,17 +63,15 @@
 
 .ceoStoryItem {
 	width: 100%;
-	min-height: 600px;
+	min-height: 150px;
 	margin: 0.5rem 0px;
+	background-image: url("/assets/profile.svg");
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-	display: flex;
-	align-items: flex-end;
 }
 
-.ceoStoryNameCardLarge,
-.ceoStoryNameCardSmall {
+.ceoStoryNameCardLarge, .ourStoryCard {
 	height: 10%;
 	background-color: white;
 	border-width: 1px;
@@ -81,14 +79,9 @@
 	border-radius: 10px;
 }
 
-.ceoStoryNameCardLarge {
-	width: 65%;
-	display: block;
-}
-
-.ceoStoryNameCardSmall {
-	display: none;
-	width: 100%;
+.ceoStoryNameCardLarge, .ourStoryCard {
+	width: 60%;
+	margin: auto;
 }
 
 .ceoStoryDescriptionWrapper {
@@ -117,18 +110,30 @@
 	align-items: center;
 }
 
+.ourStoryItemWrapper {
+	width: 100%;
+}
+
+.ourStoryItem {
+	min-height: 150px;
+}
+
+.galleryItem {
+	min-height: 300px;
+}
+
 .ourStoryItem,
 .galleryItem {
 	/* border: 1px solid pink; */
 	width: 100%;
-	min-height: 400px;
-	margin: 0.5rem 0px;
+	margin: 1rem 0px;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	display: flex;
 	align-items: flex-end;
 }
+
 
 .companyCustomerContainer {
 	width: 100%;
@@ -160,10 +165,11 @@
 
 .companyTypeLeftImage {
 	width: 100%;
-	max-width: 360px;
+	max-width: 425px;
 	min-height: 360px;
 	margin: 0.5rem 0px;
-	background-position: center;
+	background-image: url("/assets/ilus.svg");
+	background-position: 42.5%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	display: flex;
@@ -218,12 +224,20 @@
 		margin: auto;
 	}
 
-	/* .ceoStoryNameCardLarge {
-		display: none;
-	} */
+	.ourStoryItemWrapper {
+		width: 50%;
+	}
 
-	.ceoStoryNameCardSmall {
-		display: block;
+	.ourStoryCard {
+		width: 70%;
+	}
+
+	.ceoStoryNameCardLarge{
+		width: 33%;
+	}
+
+	.ceoStoryItem {
+		width: 33%;
 	}
 
 	.companyCustomerItem {
@@ -267,22 +281,30 @@
 	}
 }
 
-@media screen and (min-width: 1440px) {
-	/* .ourStoryContainer {
-		padding: 1rem;
-	} */
+@media screen and (min-width: 1200px) {
+	.ceoStoryNameCardLarge{
+		width: 25%;
+	}
+}
 
+@media screen and (min-width: 1440px) {
 	.ceoStoryWrapper {
 		width: 100%;
-		justify-content: space-evenly;
 	}
 
-	.ceoStoryItem,
+	.ourStoryCard {
+		width: 45%;
+	} 
+
+	.ceoStoryNameCardLarge, 
+	.ceoStoryItem {
+		width: 20%;
+	}
+
 	.ceoStoryDescriptionWrapper {
 		width: 47.5%;
 	}
 
-	.ceoStoryNameCardSmall,
 	.ceoStoryDescriptionItem {
 		box-shadow: none !important;
 		border-radius: 0px;
@@ -302,7 +324,8 @@
 
 	.companyTypeLeftImage {
 		width: 42.5%;
-	}
+		background-position: 50%;
+	}	
 
 	.companyTypeRightItem {
 		width: 55%;

@@ -7,8 +7,6 @@ import TrustedComponent from "./Trusted"
 import GalleryComponent from "./Gallery"
 import OurPurpose from "./OurPurpose"
 
-import juggernautImage from 'assets/jugger.jpg'
-
 import styles from 'src/styles/Profile.module.css'
 
 export default function ProfileComponent() {
@@ -39,11 +37,7 @@ export default function ProfileComponent() {
             <Box className={styles.ourType}>
                 <Box mt="16" ref={companyTypeRef} className={isCompanyTypeVisible && `animate__animated  animate__slideInLeft animate__slow`}>
                     <Box className={styles.companyTypeWrapper}>
-                        <Box
-                            p={5}
-                            backgroundImage={`url(${juggernautImage.src})`}
-                            className={styles.companyTypeLeftImage}
-                        />
+                        <Box p={5} className={styles.companyTypeLeftImage} />
                         <Box px={4} py={2} className={styles.companyTypeRightItem}>
                             <Heading as='h2' size='lg' className={styles.companyTypeRightTitle}>
                                 Apakah Anda Mencari Layanan Logistik?

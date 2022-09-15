@@ -46,14 +46,14 @@ h2.companySuperiorityItemCardHeading:first-letter {
 }
 
 .ourSuperiorityClip {
-	background-image: url("/assets/Desktop-1.svg");
-	background-position: 50% 50%;
+	background-image: url("/assets/Desktop-3.svg");
+	background-position: 30% 15%;
 	background-repeat: no-repeat;
 }
 
 .ourServiceClip {
-	background-image: url("/assets/Desktop-3.svg");
-	background-position: 30% 15%;
+	background-image: url("/assets/Desktop-1.svg");
+	background-position: 50% 50%;
 	background-repeat: no-repeat;
 }
 
@@ -91,12 +91,12 @@ h2.companySuperiorityItemCardHeading:first-letter {
 	}
 
 	.ourSuperiorityClip {
-		background-position: 100% 0%;
+		background-position: 17.5% 25%;
 		background-repeat: no-repeat;
 	}
-
+	
 	.ourServiceClip {
-		background-position: 17.5% 25%;
+		background-position: 100% 0%;
 		background-repeat: no-repeat;
 	}
 
@@ -137,12 +137,12 @@ h2.companySuperiorityItemCardHeading:first-letter {
 	}
 
 	.ourSuperiorityClip {
-		background-position: 100% 33%;
 		background-repeat: no-repeat;
-	}
-
-	.ourServiceClip {
 		background-position: 0% 27.5%;
+	}
+	
+	.ourServiceClip {
+		background-position: 100% 33%;
 		background-repeat: no-repeat;
 	}
 }
