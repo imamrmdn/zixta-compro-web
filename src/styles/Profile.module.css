@@ -13,10 +13,16 @@
 .ourPurpose,
 .ourStory,
 .ourGallery,
-.ourType,
 .trustedBy {
 	width: 100%;
 	position: relative;
+	padding: 1rem 2rem;
+}
+
+.ourType {
+	width: 100%;
+	position: relative;
+	padding: 1rem;
 }
 
 .ourPurposeClip {
@@ -25,7 +31,7 @@
 	height: 100%;
 	background-image: url("/assets/Desktop-3.svg");
 	background-size: cover;
-	background-position: right 10px top 50%;
+	background-position: 0px;
 	background-repeat: no-repeat;
 }
 
@@ -35,13 +41,12 @@
 	height: 100%;
 	background-image: url("/assets/Desktop-4.svg");
 	background-size: cover;
-	background-position: 33%;
+	background-position: 57.5%;
 	background-repeat: no-repeat;
 }
 
 .profileSubTitle {
 	text-align: center;
-	font-weight: 600;
 	font-size: 1rem;
 	color: var(--gray);
 	margin-top: 0.75rem;
@@ -71,7 +76,8 @@
 	background-repeat: no-repeat;
 }
 
-.ceoStoryNameCardLarge, .ourStoryCard {
+.ceoStoryNameCardLarge,
+.ourStoryCard {
 	height: 10%;
 	background-color: white;
 	border-width: 1px;
@@ -79,8 +85,9 @@
 	border-radius: 10px;
 }
 
-.ceoStoryNameCardLarge, .ourStoryCard {
-	width: 60%;
+.ceoStoryNameCardLarge,
+.ourStoryCard {
+	width: 65%;
 	margin: auto;
 }
 
@@ -133,7 +140,6 @@
 	display: flex;
 	align-items: flex-end;
 }
-
 
 .companyCustomerContainer {
 	width: 100%;
@@ -197,9 +203,6 @@
 }
 
 @media screen and (min-width: 768px) {
-	/* .ourPurposeContainer {
-		align-items: center;
-	} */
 	.ourPurpose,
 	.ourStory,
 	.ourType,
@@ -207,6 +210,7 @@
 	.trustedBy {
 		width: 90%;
 		margin: auto;
+		padding: 1rem 0px 0px 0px;
 	}
 
 	.ourVisionWrapper,
@@ -232,7 +236,7 @@
 		width: 70%;
 	}
 
-	.ceoStoryNameCardLarge{
+	.ceoStoryNameCardLarge {
 		width: 33%;
 	}
 
@@ -282,7 +286,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.ceoStoryNameCardLarge{
+	.ceoStoryNameCardLarge {
 		width: 25%;
 	}
 }
@@ -294,9 +298,9 @@
 
 	.ourStoryCard {
 		width: 45%;
-	} 
+	}
 
-	.ceoStoryNameCardLarge, 
+	.ceoStoryNameCardLarge,
 	.ceoStoryItem {
 		width: 20%;
 	}
@@ -325,7 +329,7 @@
 	.companyTypeLeftImage {
 		width: 42.5%;
 		background-position: 50%;
-	}	
+	}
 
 	.companyTypeRightItem {
 		width: 55%;

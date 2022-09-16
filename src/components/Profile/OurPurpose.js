@@ -30,7 +30,7 @@ export default function OurPurpose() {
                             <Heading as='h2' mt="8" mb="2" size='lg' textAlign='center'>
                                 {messages["company.vision"]}
                             </Heading>
-                            <Box>
+                            <Box color="#718096">
                                 {messages["company.vision.description"]}
                             </Box>
                         </Box>
@@ -44,7 +44,7 @@ export default function OurPurpose() {
                                         {messages["company.mission.title.1"]}
                                     </Heading>
                                 </ListItem>
-                                <Box>
+                                <Box color="#718096">
                                     {messages["company.mission.description.1"]}
                                 </Box>
 
@@ -53,7 +53,7 @@ export default function OurPurpose() {
                                         {messages["company.mission.title.2"]}
                                     </Heading>
                                 </ListItem>
-                                <Box>
+                                <Box color="#718096">
                                     {messages["company.mission.description.2"]}
                                 </Box>
 
@@ -62,7 +62,7 @@ export default function OurPurpose() {
                                         {messages["company.mission.title.3"]}
                                     </Heading>
                                 </ListItem>
-                                <Box>
+                                <Box color="#718096">
                                     {messages["company.mission.description.3"]}
                                 </Box>
 
@@ -71,7 +71,7 @@ export default function OurPurpose() {
                                         {messages["company.mission.title.4"]}
                                     </Heading>
                                 </ListItem>
-                                <Box>
+                                <Box color="#718096">
                                     {messages["company.mission.description.4"]}
                                 </Box>
 
