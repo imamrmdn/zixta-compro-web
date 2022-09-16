@@ -1,6 +1,5 @@
 .container {
 	width: 100%;
-	padding: 0 0.5rem;
 }
 
 .description {
@@ -47,6 +46,7 @@
 .companyHistory {
 	width: 100%;
 	position: relative;
+	padding: 1rem;
 }
 
 .companyHistory {
@@ -63,7 +63,7 @@
 .companyHistoryClip {
 	background-image: url("/assets/Desktop-4.svg");
 	background-size: cover;
-	background-position: 50% 3%;
+	background-position: 50% 5%;
 	background-repeat: no-repeat;
 }
 
@@ -83,7 +83,6 @@
 
 .companyReasonItemSubTitle,
 .subTitle {
-	font-weight: 600;
 	color: var(--gray);
 	margin-top: 8px;
 }
@@ -126,6 +125,7 @@
 	.companyReason {
 		width: 90%;
 		margin: auto;
+		padding: 1rem 0px 0px 0px;
 	}
 
 	.container {
@@ -154,7 +154,7 @@
 	}
 
 	.companyHistoryClip {
-		background-position: center 100px;
+		background-position: 50% 100%;
 	}
 
 	.companyReasonClip {

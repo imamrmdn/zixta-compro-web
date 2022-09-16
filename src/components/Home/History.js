@@ -43,10 +43,10 @@ export default function History() {
                     <Heading as='h2' size='lg' textAlign='center' position="relative">
                         {messages["company.history"]}
                     </Heading>
-                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1" position="relative">
+                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1" position="relative" color="#718096">
                         {messages["company.history.1"]}
                     </Text>
-                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" position="relative">
+                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" position="relative" color="#718096">
                         {messages["company.history.2"]}
                     </Text>
                 </Box>

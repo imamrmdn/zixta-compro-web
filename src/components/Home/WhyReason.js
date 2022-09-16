@@ -5,8 +5,6 @@ import { useIntl } from 'react-intl'
 
 import styles from 'src/styles/Home.module.css'
 
-import juggernautImage from 'assets/jugger.jpg'
-
 export default function WhyReason() {
     const [isCompanyReasonVisible, setisCompanyReasonVisible] = useState(false)
 
@@ -30,21 +28,21 @@ export default function WhyReason() {
                     <Heading as='h2' size='lg' textAlign='center'>
                         {messages["company.why.title"]}
                     </Heading>
-                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1">
+                    <Text fontSize="md" textAlign="justify" letterSpacing="wide" my="1" color="#718096">
                         {messages["company.why.reason"]}
                     </Text>
                     <Box className={styles.companyReasonContainer}>
                         <Box className={styles.companyReasonItemWrapper}>
                             <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-kualitas.svg"
+                                    alt="kualitas image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
                                 />
                             </Box>
-                            <Box mx='1'>
+                            <Box ml="3">
                                 <Heading as='h2' size='md'>
                                     {messages["company.why.reason.title.1"]}
                                 </Heading>
@@ -56,14 +54,14 @@ export default function WhyReason() {
                         <Box className={styles.companyReasonItemWrapper}>
                             <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-tepat-waktu.svg"
+                                    alt="tepat waktu image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
                                 />
                             </Box>
-                            <Box mx='1'>
+                            <Box ml="3">
                                 <Heading as='h2' size='md'>
                                     {messages["company.why.reason.title.2"]}
                                 </Heading>
@@ -75,14 +73,14 @@ export default function WhyReason() {
                         <Box className={styles.companyReasonItemWrapper}>
                             <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-daya-manusia.svg"
+                                    alt="sumber daya image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
                                 />
                             </Box>
-                            <Box mx='1'>
+                            <Box ml="3">
                                 <Heading as='h2' size='md'>
                                     {messages["company.why.reason.title.3"]}
                                 </Heading>
@@ -94,14 +92,14 @@ export default function WhyReason() {
                         <Box className={styles.companyReasonItemWrapper}>
                             <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-aksebilitas.svg"
+                                    alt="aksesibility image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
                                 />
                             </Box>
-                            <Box mx='1'>
+                            <Box ml="3">
                                 <Heading as='h2' size='md'>
                                     {messages["company.why.reason.title.4"]}
                                 </Heading>
