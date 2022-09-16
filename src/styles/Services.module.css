@@ -13,8 +13,7 @@
 }
 
 .companyServicesItemSubTitle {
-	font-weight: 600;
-	font-size: 0.75rem;
+	font-size: 0.85rem;
 	color: var(--gray);
 	margin-top: 8px;
 }
@@ -43,6 +42,7 @@ h2.companySuperiorityItemCardHeading:first-letter {
 .ourCareer {
 	width: 100%;
 	position: relative;
+	padding: 1rem 2rem;
 }
 
 .ourSuperiorityClip {
@@ -52,8 +52,8 @@ h2.companySuperiorityItemCardHeading:first-letter {
 }
 
 .ourServiceClip {
-	background-image: url("/assets/Desktop-1.svg");
-	background-position: 50% 50%;
+	background-image: url("/assets/Desktop-2.svg");
+	background-position: left top 10%;
 	background-repeat: no-repeat;
 }
 
@@ -62,6 +62,7 @@ h2.companySuperiorityItemCardHeading:first-letter {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	background-size: cover;
 }
 
 .displayArrowForwardIcon,
@@ -83,6 +84,7 @@ h2.companySuperiorityItemCardHeading:first-letter {
 	.ourCareer {
 		width: 90%;
 		margin: auto;
+		padding: 1rem 0px 0px 0px;
 	}
 
 	.companySuperiorityItemWrapper {
@@ -94,7 +96,7 @@ h2.companySuperiorityItemCardHeading:first-letter {
 		background-position: 17.5% 25%;
 		background-repeat: no-repeat;
 	}
-	
+
 	.ourServiceClip {
 		background-position: 100% 0%;
 		background-repeat: no-repeat;
@@ -140,9 +142,9 @@ h2.companySuperiorityItemCardHeading:first-letter {
 		background-repeat: no-repeat;
 		background-position: 0% 27.5%;
 	}
-	
+
 	.ourServiceClip {
-		background-position: 100% 33%;
+		background-position: 0% 25%;
 		background-repeat: no-repeat;
 	}
 }

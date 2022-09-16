@@ -32,13 +32,13 @@ export default function Contact() {
                 <Box className={styles.contactWrapper}>
                     <Box p={5} mt="4" shadow='sm' className={styles.contactCardOffice}>
                         <Heading fontSize='xl' textAlign="center" height="6">Head Office</Heading>
-                        <Text mt="2" textAlign="center">Gedung Tjokro Bersaudara lt.2, Jl. Enggano No. 66 RT.013/RW.06, Tanjung Priok, Jakarta Utara, DKI Jakarta, 14310</Text>
+                        <Text mt="2" textAlign="center" color="#718096">Gedung Tjokro Bersaudara lt.2, Jl. Enggano No. 66 RT.013/RW.06, Tanjung Priok, Jakarta Utara, DKI Jakarta, 14310</Text>
 
                         <Heading mt="6" fontSize='xl' textAlign="center" height="6">Branch Office</Heading>
-                        <Text mt="2" textAlign="center">Jl. Pasir Putih Raya Blok E- 5D No. 13 (Ruko Kobexindo), Ancol, Pademangan, Jakarta Utara, DKI Jakarta, 14430</Text>
+                        <Text mt="2" textAlign="center" color="#718096">Jl. Pasir Putih Raya Blok E- 5D No. 13 (Ruko Kobexindo), Ancol, Pademangan, Jakarta Utara, DKI Jakarta, 14430</Text>
 
                         <Heading mt="6" fontSize='xl' textAlign="center" height="6">Pool</Heading>
-                        <Text mt="2" textAlign="center">Garasi Rohan, Jalan Sarang Bangau, Marunda, Jakarta Utara</Text>
+                        <Text mt="2" textAlign="center" color="#718096">Garasi Rohan, Jalan Sarang Bangau, Marunda, Jakarta Utara</Text>
                     </Box>
 
                     <MapWithNoSSR />

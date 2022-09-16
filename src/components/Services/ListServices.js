@@ -3,7 +3,6 @@ import Image from "next/image"
 import { Box, Heading } from "@chakra-ui/react"
 import { useIntl } from 'react-intl'
 
-import juggernautImage from 'assets/jugger.jpg'
 import styles from 'src/styles/Services.module.css'
 
 export default function ListServices() {
@@ -29,10 +28,10 @@ export default function ListServices() {
                 <Box ref={companyServicesRef} className={isCompanyServicesVisible && `animate__animated  animate__slideInLeft animate__slow`}>
                     <Box className={styles.companyServicesContainer}>
                         <Box className={styles.companyServicesItemWrapper}>
-                            <Box mx="0.5" width={125}>
+                            <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-pengiriman-barang.svg"
+                                    alt="pengiriman image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
@@ -48,10 +47,10 @@ export default function ListServices() {
                             </Box>
                         </Box>
                         <Box className={styles.companyServicesItemWrapper}>
-                            <Box mx="0.5" width={125}>
+                            <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-transportasi-darat.svg"
+                                    alt="transportasi image"
                                     layout="fixed"
                                     width={125}
                                     height={100}
@@ -67,10 +66,10 @@ export default function ListServices() {
                             </Box>
                         </Box>
                         <Box className={styles.companyServicesItemWrapper}>
-                            <Box mx="0.5" width={125}>
+                            <Box mx="1" width={125}>
                                 <Image
-                                    src={juggernautImage}
-                                    alt="jugger image"
+                                    src="/assets/icon-jasa-pabean.svg"
+                                    alt="pabean image"
                                     layout="fixed"
                                     width={125}
                                     height={100}

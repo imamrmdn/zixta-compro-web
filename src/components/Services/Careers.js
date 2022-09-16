@@ -24,9 +24,9 @@ export default function Careers() {
             <Box id="career" style={{ height: '7em' }} />
             <Box ref={companyCareersRef} className={isCompanyCareersVisible && `animate__animated  animate__slideInLeft animate__slow`} style={{ width: '100%' }}>
                 <Heading as='h2' size='lg'>{messages["navbar.career"]}</Heading>
-                <Text mt={4}>Apply Now!</Text>
-                <Text mt={2}>{messages["career.text"]} <a href="mailto:recruitment.zixtalog@gmail.com" rel="noopener noreferrer" style={{ color: '#037dc6' }}>recruitment.zixtalog@gmail.com</a></Text>
-                <Text mt={2}>{messages["career.join.us"]}</Text>
+                <Text mt={4} color="#718096">Apply Now!</Text>
+                <Text mt={2} color="#718096">{messages["career.text"]} <a href="mailto:recruitment.zixtalog@gmail.com" rel="noopener noreferrer" style={{ color: '#037dc6' }}>recruitment.zixtalog@gmail.com</a></Text>
+                <Text mt={2} color="#718096">{messages["career.join.us"]}</Text>
             </Box>
         </Box>
     )

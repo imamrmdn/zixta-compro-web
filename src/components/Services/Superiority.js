@@ -5,6 +5,7 @@ import {
 } from "@chakra-ui/react"
 // import { ArrowForwardIcon, ArrowDownIcon } from "@chakra-ui/icons"
 import { useIntl } from 'react-intl'
+import Image from "next/image"
 
 import styles from 'src/styles/Services.module.css'
 
@@ -35,6 +36,8 @@ export default function Superiority() {
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
                                 headingClass={styles.companySuperiorityItemCardHeading}
+                                src="/assets/icon-komunikatif.svg"
+                                alt="komunikatif image"
                                 title={messages["company.superiority.title.1"]}
                                 desc={messages["company.superiority.description.1"]}
                             />
@@ -46,6 +49,8 @@ export default function Superiority() {
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
                                 headingClass={styles.companySuperiorityItemCardHeading}
+                                src="/assets/icon-unggul.svg"
+                                alt="unggul image"
                                 title={messages["company.superiority.title.2"]}
                                 desc={messages["company.superiority.description.2"]}
                             />
@@ -57,6 +62,8 @@ export default function Superiority() {
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
                                 headingClass={styles.companySuperiorityItemCardHeading}
+                                src="/assets/icon-aman.svg"
+                                alt="aman image"
                                 title={messages["company.superiority.title.3"]}
                                 desc={messages["company.superiority.description.3"]}
                             />
@@ -68,6 +75,8 @@ export default function Superiority() {
                         <Box className={styles.companySuperiorityItemWrapper}>
                             <Card
                                 headingClass={styles.companySuperiorityItemCardHeading}
+                                src="/assets/icon-terpercaya.svg"
+                                alt="terpercaya image"
                                 title={messages["company.superiority.title.4"]}
                                 desc={messages["company.superiority.description.4"]}
                             />
@@ -89,11 +98,20 @@ export default function Superiority() {
 }
 
 
-function Card({ title, desc, headingClass, ...rest }) {
+function Card({ title, desc, src, alt, headingClass, ...rest }) {
     return (
         <Box p={4} w="100%" shadow='md' borderWidth='1px' borderRadius='10px' {...rest}>
+            <Box mx="auto" width={75}>
+                <Image
+                    src={src}
+                    alt={alt}
+                    layout="fixed"
+                    width={75}
+                    height={75}
+                />
+            </Box>
             <Heading fontSize='xl' className={headingClass} textAlign="center" height="12">{title}</Heading>
-            <Text mt={4} textAlign="center">{desc}</Text>
+            <Text mt={4} textAlign="center" color="#718096">{desc}</Text>
         </Box>
     )
 }
